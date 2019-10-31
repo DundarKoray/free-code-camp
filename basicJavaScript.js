@@ -325,7 +325,63 @@ function trueOrFalse(wasThatTrue) {
 }
   
 // Change this value to test
-console.log(trueOrFalse(true));
-console.log(trueOrFalse(false));
+console.log(trueOrFalse(true)); // Yes that was true
+console.log(trueOrFalse(false)); // No, that was false
 
 //---------------
+// Comparison with the Equality Operator ==
+
+/* Question
+Add the equality operator to the indicated line so that the function will return "Equal" when val is equivalent to 12.
+*/
+
+// Setup
+function testEqual(val) {
+    if (val == 12) { // Change this line
+      return "Equal";
+    }
+    return "Not Equal";
+}
+  
+// Change this value to test
+console.log(testEqual(10)); // Not Equal
+console.log(testEqual(12)); // Equal
+  
+//---------------
+// Comparison with the Strict Equality Operator ===
+
+/* Question
+Use the strict equality operator in the if statement so the function will return "Equal" when val is strictly equal to 7
+*/
+
+// Setup
+function testStrict(val) {
+    if (val === 7) { // Change this line
+      return "Yes, it is equal";
+    }
+    return "Not, it is not equal";
+}
+  
+// Change this value to test
+console.log("is it equal?", testStrict(7)); // is it equal? Yes, it is equal
+console.log("is it equal?", testStrict("seven")); // is it equal? Not, it is not equal
+
+//---------------
+// Practice comparing different values
+
+/* Question
+The compareEquality function in the editor compares two values using the equality operator. Modify the function so that it returns "Equal" only when the values are strictly equal.
+*/
+
+// Setup
+function compareEquality(a, b) {
+    if (a === b) { // Change this line
+      return "Equal";
+    }
+    return "Not Equal";
+  }
+  
+  // Change this value to test
+  console.log(compareEquality(10, "10")); // Not Equal
+
+  
