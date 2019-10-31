@@ -85,6 +85,7 @@ reusableFunction()
 
 /* Question 
 1. Create a function called functionWithArgs that accepts two arguments and outputs their sum to the dev console.
+
 2.Call the function with two numbers as arguments.
 */
 
@@ -99,4 +100,38 @@ function functionWithArgs(num1, num2) {
     console.log(num1 + num2)
 }
 functionWithArgs(25, 10) // Outputs 35
+
+//-----------------
+// Global Scope and Functions
+
+/* Question
+Using var, declare a global variable myGlobal outside of any function. Initialize it with a value of 10.
+
+Inside function fun1, assign 5 to oopsGlobal without using the var keyword.
+*/
+
+// Declare your variable here
+var myGlobal = 10;
+
+function fun1() {
+    // Assign 5 to oopsGlobal Here  
+    oopsGlobal = 5;
+}
+
+// Only change code above this line
+function fun2() {
+    var output = "";
+    if (typeof myGlobal != "undefined") {
+        output += "myGlobal: " + myGlobal;
+    }
+    if (typeof oopsGlobal != "undefined") {
+        output += " oopsGlobal: " + oopsGlobal;
+    }
+    console.log(output);
+}
+
+fun1()
+fun2()
+
+//-------------------
 
