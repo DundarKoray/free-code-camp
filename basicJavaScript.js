@@ -186,6 +186,32 @@ function myOutfit() {
 console.log(outerWear) // outputs "T-Shirt" before it cannot see local scope
 myOutfit(); // outputs "sweater" as it communicates with local scope
 
+//-------------
+// Return a Value from a Function with Return
+
+/* Question
+Create a function timesFive that accepts one argument, multiplies it by 5, and returns the new value. See the last line in the editor for an example of how you can test your timesFive function.
+*/
+
+// Example
+function minusSeven(num) {
+    return num - 7;
+}
+
+console.log(minusSeven(10)); // 3
+  
+// Only change code below this line
+function timesFive(number) {
+    return number * 5
+}
+
+console.log(timesFive(5)) // 25
+
+//--------------
+
+
+
+  
 
 
   
