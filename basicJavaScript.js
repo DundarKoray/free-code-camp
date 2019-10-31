@@ -151,7 +151,6 @@ myLocalScope(); // outputs: myVar is not defined outside of myLocalScope
 // console.log(myVar); this would give an error because my var is not in global scope
 
 //---------------------
-
 // Local Scope and Functions
 
 /*  Question
@@ -167,8 +166,25 @@ function myLocalScope1() {
 myLocalScope1(); // outputs: Hello from myLocalScope function    
 // console.log(myVar);  gives an error myVar is defined
 
-//--------------
-  
+//---------------------
+// Global vs. Local Scope in Functions
+
+/* Question
+Add a local variable to myOutfit function to override the value of outerWear with "sweater".
+*/
+
+// Setup
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+    var outerWear = "sweater";
+
+  // Only change code above this line
+  console.log(outerWear);
+}
+console.log(outerWear) // outputs "T-Shirt" before it cannot see local scope
+myOutfit(); // outputs "sweater" as it communicates with local scope
 
 
 
