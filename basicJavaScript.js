@@ -131,7 +131,27 @@ function fun2() {
 }
 
 fun1()
-fun2()
+fun2() // outputs: myGlobal: 10 oopsGlobal: 5
 
 //-------------------
+// Local Scope and Functions 
+
+/*  Question
+Declare a local variable myVar inside myLocalScope. Run the tests and then follow the instructions commented out in the editor.
+*/
+
+function myLocalScope() {
+    var myVar = "myVar is not defined outside of myLocalScope";
+    'use strict'; // you shouldn't need to edit this line  
+    console.log(myVar); 
+}
+    
+    
+myLocalScope(); // outputs: myVar is not defined outside of myLocalScope
+// console.log(myVar); this would give an error because my var is not in global scope
+
+//---------------------
+
+  
+
 
