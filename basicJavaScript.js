@@ -232,9 +232,33 @@ addThree(); // 3
 addFive(); // 8  (sum was not 0 but 3 at first as addThree function is called before)
 
 //------------
+// Assignment with a Returned Value
 
-  
+/* Question
+Call the processArg function with an argument of 7 and assign its return value to the variable processed.
+*/
 
+// Example
+var changed = 0;
+
+function change(num) {
+  return (num + 5) / 3;
+}
+
+changed = change(10);
+
+// Setup
+var processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+// Only change code below this line
+processed = processArg(7)
+console.log(processed) // 2
+
+//--------------
 
   
 
