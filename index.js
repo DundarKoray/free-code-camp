@@ -56,4 +56,29 @@ There should be at least 5 sub-arrays in the list.
 var myList = [];
 myList = [["Garlic Bread", 1], ["Tomato", 5], ["Egg", 12], ["Sliced Salmon", 6], ["Cream Cheese", 1]]
 
+console.log(myList)
+
 //---------------
+// Write Reusable JavaScript with Functions
+
+/* Question 
+1. Create a function called reusableFunction which prints "Hi World" to the dev console.
+2. Call the function.
+*/
+
+// Example
+function ourReusableFunction() {
+    console.log("Heyya, World");
+  }
+  
+  ourReusableFunction();
+  
+// Only change code below this line
+function reusableFunction() {
+    console.log("Hi World")
+}
+
+reusableFunction()
+
+//-----------------
+  
