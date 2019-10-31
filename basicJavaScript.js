@@ -208,8 +208,30 @@ function timesFive(number) {
 console.log(timesFive(5)) // 25
 
 //--------------
+// Understanding Undefined Value returned from a Function
 
+/* Question
+Create a function addFive without any arguments. This function adds 5 to the sum variable, but its returned value is undefined.
+*/
 
+// Example
+var sum = 0;
+function addThree() {
+  sum = sum + 3;
+  console.log(sum)
+}
+
+// Only change code below this line
+function addFive() {
+    sum = sum + 5;
+    console.log(sum)
+}
+
+// Only change code above this line
+addThree(); // 3
+addFive(); // 8  (sum was not 0 but 3 at first as addThree function is called before)
+
+//------------
 
   
 
