@@ -152,6 +152,26 @@ myLocalScope(); // outputs: myVar is not defined outside of myLocalScope
 
 //---------------------
 
+// Local Scope and Functions
+
+/*  Question
+Declare a local variable myVar1 inside myLocalScope. Run the tests and then follow the instructions commented out in the editor.
+*/
+
+function myLocalScope1() {
+    'use strict'; // you shouldn't need to edit this line
+    var myVar = "Hello from myLocalScope function"
+    console.log(myVar);
+}
+
+myLocalScope1(); // outputs: Hello from myLocalScope function    
+// console.log(myVar);  gives an error myVar is defined
+
+//--------------
+  
+
+
+
   
 
 
