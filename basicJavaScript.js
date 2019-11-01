@@ -379,9 +379,27 @@ function compareEquality(a, b) {
       return "Equal";
     }
     return "Not Equal";
-  }
+}
   
-  // Change this value to test
-  console.log(compareEquality(10, "10")); // Not Equal
+// Change this value to test
+console.log(compareEquality(10, "10")); // Not Equal
 
+//---------------
+// Comparison with the Inequality Operator
+
+/* Question
+Add the inequality operator != in the if statement so that the function will return "Not Equal" when val is not equivalent to 99
+*/
+
+// Setup
+function testNotEqual(val) {
+    if (val != 99) { // Change this line
+      return "Not Equal";
+    }
+    return "Equal";
+}
   
+// Change this value to test
+console.log("Is this number equal to 99?", testNotEqual(10)); // Not Equal
+
+
