@@ -402,4 +402,20 @@ function testNotEqual(val) {
 // Change this value to test
 console.log("Is this number equal to 99?", testNotEqual(10)); // Not Equal
 
+//---------------
+// Comparison with the Inequality Operator
 
+/* Question
+Add the strict inequality operator to the if statement so the function will return "Not Equal" when val is not strictly equal to 17
+*/
+
+// Setup
+function testStrictNotEqual(val) {
+    if (val !== 17) { // Change this line
+      return "Not Equal";
+    }
+    return "Equal";
+}
+  
+// Change this value to test
+testStrictNotEqual(10);  
