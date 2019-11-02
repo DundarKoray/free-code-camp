@@ -440,4 +440,27 @@ function testGreaterThan(val) {
 }
 
 // Change this value to test
-console.log(testGreaterThan(10));
+console.log(testGreaterThan(10)); // 10 or Under
+
+//--------------------
+// Comparison with the Greater Than Or Equal To Operator
+
+/* Question
+Add the greater than or equal to operator to the indicated lines so that the return statements make sense.
+*/
+
+function testGreaterOrEqual(val) {
+  if (val >= 20) {  // Change this line
+    return "20 or Over";
+  }
+
+  if (val >= 10) {  // Change this line
+    return "10 or Over";
+  }
+
+  return "Less than 10";
+}
+
+// Change this value to test
+console.log(testGreaterOrEqual(10)); // 10 or Over
+
