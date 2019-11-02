@@ -678,3 +678,41 @@ function golfScore(par, strokes) {
 
 // Change these values to test
 console.log(golfScore(5, 4)); // Birdie
+
+//--------------------
+// Selecting from Many Options with Switch Statements
+
+/* Question
+Write a switch statement which tests val and sets answer for the following conditions:
+1 - "alpha"
+2 - "beta"
+3 - "gamma"
+4 - "delta"
+*/
+
+function caseInSwitch(val) {
+  var answer = "";
+  // Only change code below this line
+  switch (val) {
+
+    case 1:
+      answer = "alpha"
+      break;
+    case 2:
+      answer = "beta"
+      break;
+    case 3:
+      answer = "gamma"
+      break;
+    case 4:
+      answer = "delta"
+      break;
+  }
+
+
+  // Only change code above this line
+  return answer;
+}
+
+// Change this value to test
+console.log(caseInSwitch(1)); // alpha
