@@ -508,3 +508,23 @@ function testLessOrEqual(val) {
 // Change this value to test
 console.log(testLessOrEqual(10)); // Smaller Than or Equal to 12
 
+//--------------------
+// Comparisons with the Logical And Operator
+
+/* Question
+Combine the two if statements into one statement which will return "Yes" if val is less than or equal to 50 and greater than or equal to 25. Otherwise, will return "No".
+*/
+
+function testLogicalAnd(val) {
+  // Only change code below this line
+
+  if (val <= 50 && val > 25) {
+    return "Yes";
+  }
+
+  // Only change code above this line
+  return "No";
+}
+
+// Change this value to test
+console.log(testLogicalAnd(10)); // No
