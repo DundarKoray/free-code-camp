@@ -68,14 +68,14 @@ console.log(myList)
 
 // Example
 function ourReusableFunction() {
-    console.log("Heyya, World");
-  }
-  
-  ourReusableFunction();
-  
+  console.log("Heyya, World");
+}
+
+ourReusableFunction();
+
 // Only change code below this line
 function reusableFunction() {
-    console.log("Hi World")
+  console.log("Hi World")
 }
 
 reusableFunction()
@@ -91,13 +91,13 @@ reusableFunction()
 
 // Example
 function ourFunctionWithArgs(a, b) {
-    console.log(a - b);
+  console.log(a - b);
 }
 ourFunctionWithArgs(10, 5); // Outputs 5
-  
+
 // Only change code below this line.
 function functionWithArgs(num1, num2) {
-    console.log(num1 + num2)
+  console.log(num1 + num2)
 }
 functionWithArgs(25, 10) // Outputs 35
 
@@ -114,20 +114,20 @@ Inside function fun1, assign 5 to oopsGlobal without using the var keyword.
 var myGlobal = 10;
 
 function fun1() {
-    // Assign 5 to oopsGlobal Here  
-    oopsGlobal = 5;
+  // Assign 5 to oopsGlobal Here  
+  oopsGlobal = 5;
 }
 
 // Only change code above this line
 function fun2() {
-    var output = "";
-    if (typeof myGlobal != "undefined") {
-        output += "myGlobal: " + myGlobal;
-    }
-    if (typeof oopsGlobal != "undefined") {
-        output += " oopsGlobal: " + oopsGlobal;
-    }
-    console.log(output);
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
 }
 
 fun1()
@@ -141,12 +141,12 @@ Declare a local variable myVar inside myLocalScope. Run the tests and then follo
 */
 
 function myLocalScope() {
-    var myVar = "myVar is not defined outside of myLocalScope";
-    'use strict'; // you shouldn't need to edit this line  
-    console.log(myVar); 
+  var myVar = "myVar is not defined outside of myLocalScope";
+  'use strict'; // you shouldn't need to edit this line  
+  console.log(myVar);
 }
-    
-    
+
+
 myLocalScope(); // outputs: myVar is not defined outside of myLocalScope
 // console.log(myVar); this would give an error because my var is not in global scope
 
@@ -158,9 +158,9 @@ Declare a local variable myVar1 inside myLocalScope. Run the tests and then foll
 */
 
 function myLocalScope1() {
-    'use strict'; // you shouldn't need to edit this line
-    var myVar = "Hello from myLocalScope function"
-    console.log(myVar);
+  'use strict'; // you shouldn't need to edit this line
+  var myVar = "Hello from myLocalScope function"
+  console.log(myVar);
 }
 
 myLocalScope1(); // outputs: Hello from myLocalScope function    
@@ -178,7 +178,7 @@ var outerWear = "T-Shirt";
 
 function myOutfit() {
   // Only change code below this line
-    var outerWear = "sweater";
+  var outerWear = "sweater";
 
   // Only change code above this line
   console.log(outerWear);
@@ -195,14 +195,14 @@ Create a function timesFive that accepts one argument, multiplies it by 5, and r
 
 // Example
 function minusSeven(num) {
-    return num - 7;
+  return num - 7;
 }
 
 console.log(minusSeven(10)); // 3
-  
+
 // Only change code below this line
 function timesFive(number) {
-    return number * 5
+  return number * 5
 }
 
 console.log(timesFive(5)) // 25
@@ -223,8 +223,8 @@ function addThree() {
 
 // Only change code below this line
 function addFive() {
-    sum = sum + 5;
-    console.log(sum)
+  sum = sum + 5;
+  console.log(sum)
 }
 
 // Only change code above this line
@@ -268,21 +268,21 @@ The nextInLine function should then return the element that was removed.
 */
 
 function nextInLine(arr, item) {
-    // Your code here
-    arr.push(item);
-    var elementThatIsRemoved =arr.shift()
+  // Your code here
+  arr.push(item);
+  var elementThatIsRemoved = arr.shift()
 
-    return elementThatIsRemoved;  // Change this line
-  }
-  
-  // Test Setup
-  var testArr = [1,2,3,4,5];
-  
-  // Display Code
-  console.log("Before: " + JSON.stringify(testArr));
-  console.log(nextInLine(testArr, 6)); // Modify this line to test
-  console.log("After: " + JSON.stringify(testArr));
-  
+  return elementThatIsRemoved;  // Change this line
+}
+
+// Test Setup
+var testArr = [1, 2, 3, 4, 5];
+
+// Display Code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6)); // Modify this line to test
+console.log("After: " + JSON.stringify(testArr));
+
 //-----------------------
 // Understanding Boolean Values
 
@@ -292,11 +292,11 @@ Modify the welcomeToBooleans function so that it returns true instead of false w
 
 function welcomeToBooleans() {
 
-    // Only change code below this line.
-  
-    return true; // Change this line
-  
-    // Only change code above this line.
+  // Only change code below this line.
+
+  return true; // Change this line
+
+  // Only change code above this line.
 }
 
 console.log(welcomeToBooleans())
@@ -307,23 +307,23 @@ Create an if statement inside the function to return "Yes, that was true" if the
 
 // Example
 function ourTrueOrFalse(isItTrue) {
-    if (isItTrue) {
-      return "Yes, it's true";
-    }
-    return "No, it's false";
+  if (isItTrue) {
+    return "Yes, it's true";
+  }
+  return "No, it's false";
 }
-  
+
 // Setup
 function trueOrFalse(wasThatTrue) {
-  
-    // Only change code below this line.
-    if(wasThatTrue) {
-        return "Yes that was true";
-    }
-    return "No, that was false";
-    // Only change code above this line.
+
+  // Only change code below this line.
+  if (wasThatTrue) {
+    return "Yes that was true";
+  }
+  return "No, that was false";
+  // Only change code above this line.
 }
-  
+
 // Change this value to test
 console.log(trueOrFalse(true)); // Yes that was true
 console.log(trueOrFalse(false)); // No, that was false
@@ -337,16 +337,16 @@ Add the equality operator to the indicated line so that the function will return
 
 // Setup
 function testEqual(val) {
-    if (val == 12) { // Change this line
-      return "Equal";
-    }
-    return "Not Equal";
+  if (val == 12) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
 }
-  
+
 // Change this value to test
 console.log(testEqual(10)); // Not Equal
 console.log(testEqual(12)); // Equal
-  
+
 //---------------
 // Comparison with the Strict Equality Operator ===
 
@@ -356,12 +356,12 @@ Use the strict equality operator in the if statement so the function will return
 
 // Setup
 function testStrict(val) {
-    if (val === 7) { // Change this line
-      return "Yes, it is equal";
-    }
-    return "Not, it is not equal";
+  if (val === 7) { // Change this line
+    return "Yes, it is equal";
+  }
+  return "Not, it is not equal";
 }
-  
+
 // Change this value to test
 console.log("is it equal?", testStrict(7)); // is it equal? Yes, it is equal
 console.log("is it equal?", testStrict("seven")); // is it equal? Not, it is not equal
@@ -375,12 +375,12 @@ The compareEquality function in the editor compares two values using the equalit
 
 // Setup
 function compareEquality(a, b) {
-    if (a === b) { // Change this line
-      return "Equal";
-    }
-    return "Not Equal";
+  if (a === b) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
 }
-  
+
 // Change this value to test
 console.log(compareEquality(10, "10")); // Not Equal
 
@@ -393,12 +393,12 @@ Add the inequality operator != in the if statement so that the function will ret
 
 // Setup
 function testNotEqual(val) {
-    if (val != 99) { // Change this line
-      return "Not Equal";
-    }
-    return "Equal";
+  if (val != 99) { // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
 }
-  
+
 // Change this value to test
 console.log("Is this number equal to 99?", testNotEqual(10)); // Not Equal
 
@@ -411,11 +411,33 @@ Add the strict inequality operator to the if statement so the function will retu
 
 // Setup
 function testStrictNotEqual(val) {
-    if (val !== 17) { // Change this line
-      return "Not Equal";
-    }
-    return "Equal";
+  if (val !== 17) { // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
 }
-  
+
 // Change this value to test
-testStrictNotEqual(10);  
+testStrictNotEqual(10);
+
+//--------------------
+// Comparison with the Greater Than Operator
+
+/* Question
+Add the greater than operator to the indicated lines so that the return statements make sense.
+*/
+
+function testGreaterThan(val) {
+  if (val > 100) {  // Change this line
+    return "Over 100";
+  }
+
+  if (val > 10) {  // Change this line
+    return "Over 10";
+  }
+
+  return "10 or Under";
+}
+
+// Change this value to test
+console.log(testGreaterThan(10));
