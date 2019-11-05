@@ -849,3 +849,31 @@ function isLess(a, b) {
 // Change these values to test
 console.log(isLess(10, 15)); // true
 console.log(isLess(15, 10)); // false
+
+//--------------------
+// Return Early Pattern for Functions
+
+/* Question
+Modify the function abTest so that if a or b are less than 0 the function will immediately exit with a value of undefined.
+
+Hint
+Remember that undefined is a keyword, not a string.
+*/
+
+// Setup
+function abTest(a, b) {
+  // Only change code below this line
+  if (a < 0 || b < 0) {
+    return undefined
+  }
+
+
+  // Only change code above this line
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+// Change values below to test your code
+console.log(abTest(2, 2)); // 8
+console.log(abTest(4, 3)); // 14
+console.log(abTest(-2, 2)); // undefined
