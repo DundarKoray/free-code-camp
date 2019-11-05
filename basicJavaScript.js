@@ -970,3 +970,13 @@ var myDog = {
 
 console.log("koiran nimi:", myDog.name, "koiran vaimon nimi:", myDog.friends[0])
 //koiran nimi: Tarzan koiran vaimon nimi: Jane
+
+//--------------------
+// Return Early Pattern for Functions
+
+/* Question
+Modify the function abTest so that if a or b are less than 0 the function will immediately exit with a value of undefined.
+
+Hint
+Remember that undefined is a keyword, not a string.
+*/
