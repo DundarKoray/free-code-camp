@@ -941,3 +941,32 @@ console.log(cc(3)) // 2 BET
 console.log(cc(7)) // 0 HOLD
 console.log(cc("K")) // -1 HOLD
 console.log(cc("A")) // -2 HOLD
+
+//--------------------
+// Build JavaScript Objects
+
+/* Question
+Make an object that represents a dog called myDog which contains the properties "name" (a string), "legs", "tails" and "friends".
+
+You can set these object properties to whatever values you want, as long "name" is a string, "legs" and "tails" are numbers, and "friends" is an array.
+*/
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+// Only change code below this line.
+
+var myDog = {
+  "name": "Tarzan",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Jane"]
+};
+
+console.log("koiran nimi:", myDog.name, "koiran vaimon nimi:", myDog.friends[0])
+//koiran nimi: Tarzan koiran vaimon nimi: Jane
