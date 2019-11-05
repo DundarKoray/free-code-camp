@@ -801,7 +801,7 @@ console.log(sequentialSizes(8)); // High
 // Replacing If Else Chains with Switch
 
 /* Question
-Change the chained if/else if statements into a switch statement. "High"
+Change the chained if/else if statements into a switch statement.
 */
 
 function chainToSwitch(val) {
@@ -833,3 +833,19 @@ function chainToSwitch(val) {
 // Change this value to test
 console.log(chainToSwitch(7)); // Ate Nine
 console.log(chainToSwitch("bob")); // Marley
+
+//--------------------
+// Returning Boolean Values from Functions
+
+/* Question
+Fix the function isLess to remove the if/else statements.
+*/
+
+function isLess(a, b) {
+  // Fix this code
+  return a < b;
+}
+
+// Change these values to test
+console.log(isLess(10, 15)); // true
+console.log(isLess(15, 10)); // false
