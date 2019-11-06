@@ -1035,3 +1035,33 @@ var playerNumber = 16;       // Change this Line
 var player = testObj[playerNumber];   // Change this Line
 
 console.log(player) // Montana
+
+//--------------------
+// Updating Object Properties
+
+/* Question
+Update the myDog object's name property. Let's change her name from "Coder" to "Happy Coder". You can use either dot or bracket notation.
+*/
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+ourDog.name = "Happy Camper";
+
+// Setup
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line.
+console.log(myDog.name) // Coder
+myDog.name = "Happy Coder"
+console.log(myDog.name) // Happy Coder
