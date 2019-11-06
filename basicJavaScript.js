@@ -1125,3 +1125,32 @@ var myDog = {
 console.log(myDog.tails) // 1
 delete myDog.tails
 console.log(myDog.tails) // undefined
+
+
+//--------------------
+// Using Objects for Lookups
+
+/* Question
+Convert the switch statement into an object called lookup. Use it to look up val and assign the associated string to the result variable.
+*/
+
+// Setup
+function phoneticLookup(val) {
+  
+  // Only change code below this line
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo" : "Easy",
+    "foxtrot": "Frank"
+  }
+  var result = lookup[val];
+  
+  // Only change code above this line
+  return result;
+}
+
+// Change this value to test
+console.log(phoneticLookup("charlie")); // Chicago
