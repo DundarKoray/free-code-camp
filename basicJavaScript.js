@@ -992,3 +992,25 @@ var shirtValue = testObj.shirt;    // Change this line
 
 console.log(hatValue) //ballcap
 console.log(shirtValue) // jersey
+
+//--------------------
+// Accessing Object Properties with Bracket Notation
+
+/* Question
+Read the values of the properties "an entree" and "the drink" of testObj using bracket notation and assign them to entreeValue and drinkValue respectively.
+*/
+
+// Setup
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "thedrink": "water"
+};
+
+// Only change code below this line
+
+var entreeValue = testObj["an entree"];   // Change this line
+var drinkValue = testObj["thedrink"];    // Change this line
+
+console.log(entreeValue) // hamburger 
+console.log(drinkValue) // water
