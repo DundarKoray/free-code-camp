@@ -1093,3 +1093,35 @@ var myDog = {
 
 myDog.bark = "woof"
 console.log(myDog.bark) // woof
+
+//--------------------
+// Delete Properties from a JavaScript Object
+
+/* Question
+Delete the "tails" property from myDog. You may use either dot or bracket notation.
+*/
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"],
+  "bark": "bow-wow"
+};
+
+delete ourDog.bark;
+
+// Setup
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+// Only change code below this line.
+console.log(myDog.tails) // 1
+delete myDog.tails
+console.log(myDog.tails) // undefined
