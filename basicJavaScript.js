@@ -1343,3 +1343,24 @@ console.log(updateRecords(2548, "tracks", "Living On A Prayer"));
 console.log(updateRecords(5439, "tracks", "Hello There"));
 console.log(updateRecords(5439, "tracks", "November Dance"));
 console.log(updateRecords(5439, "artist", "ABBA"));
+
+//--------------------
+// Iterate with JavaScript While Loops
+
+/* Question
+Push the numbers 0 through 4 to myArray using a while loop.
+*/
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+console.log(myArray) // [] (empty array) 
+
+var i = 0;
+while(i < 5) {
+  myArray.push(i);
+  i++;
+}
+
+console.log(myArray) // 0, 1, 2, 3, 4
