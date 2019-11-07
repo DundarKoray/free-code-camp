@@ -1566,3 +1566,20 @@ function lookUpProfile(name, prop){
 console.log(lookUpProfile("Akira", "likes")); //(3) ["Pizza", "Coding", "Brownie Points"]
 console.log(lookUpProfile("Akira", "nationality")); // No such property
 console.log(lookUpProfile("Koray", "likes")); // No such contact
+
+//--------------------
+// Generate Random Fractions with JavaScript
+
+/* Question
+Change randomFraction to return a random number instead of returning 0.
+*/
+
+function randomFraction() {
+
+  // Only change code below this line.
+
+  return Math.random();
+
+  // Only change code above this line.
+}
+
