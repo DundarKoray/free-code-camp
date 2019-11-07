@@ -1364,3 +1364,28 @@ while(i < 5) {
 }
 
 console.log(myArray) // 0, 1, 2, 3, 4
+
+//--------------------
+// Iterate with JavaScript For Loops
+
+/* Question
+Use a for loop to work to push the values 1 through 5 onto myArray.
+*/
+
+// Example
+var ourArray = [];
+
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray2 = [];
+
+// Only change code below this line.
+for (var i = 1; i < 6; i++) {
+  myArray2.push(i);
+}
+
+console.log(myArray2) // 1, 2, 3, 4, 5
+
