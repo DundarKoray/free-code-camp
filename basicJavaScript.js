@@ -1432,10 +1432,35 @@ for (var i = 10; i > 0; i -= 2) {
 var myArray4 = [];
 
 // Only change code below this line.
-
 for (var i = 9; i > 0; i -= 2) {
   myArray4.push(i)
 }
 
 console.log(myArray4) // (5) [9, 7, 5, 3, 1]
 
+//--------------------
+// Iterate Through an Array with a For Loop
+
+/* Question
+Declare and initialize a variable total to 0. Use a for loop to add the value of each element of the myArr array to total.
+*/
+
+// Example
+var ourArr = [ 9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++) {
+  ourTotal += ourArr[i];
+}
+
+// Setup
+var myArr7 = [ 2, 3, 4, 5, 6];
+
+// Only change code below this line
+var total = 0;
+
+for(var i = 0; i < myArr7.length; i++) {
+  total = total + myArr7[i];
+}
+
+console.log(total) // 20
