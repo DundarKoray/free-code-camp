@@ -1413,3 +1413,29 @@ for (var i = 1; i < 10; i += 2) {
 }
 
 console.log(myArray3); // (5) [1, 3, 5, 7, 9]
+
+//--------------------
+// Count Backwards With a For Loop
+
+/* Question
+Push the odd numbers from 9 through 1 to myArray using a for loop.
+*/
+
+// Example
+var ourArray = [];
+
+for (var i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray4 = [];
+
+// Only change code below this line.
+
+for (var i = 9; i > 0; i -= 2) {
+  myArray4.push(i)
+}
+
+console.log(myArray4) // (5) [9, 7, 5, 3, 1]
+
