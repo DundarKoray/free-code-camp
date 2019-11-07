@@ -1363,7 +1363,7 @@ while(i < 5) {
   i++;
 }
 
-console.log(myArray) // 0, 1, 2, 3, 4
+console.log(myArray) // (5) [0, 1, 2, 3, 4]
 
 //--------------------
 // Iterate with JavaScript For Loops
@@ -1387,5 +1387,29 @@ for (var i = 1; i < 6; i++) {
   myArray2.push(i);
 }
 
-console.log(myArray2) // 1, 2, 3, 4, 5
+console.log(myArray2) // (5) [1, 2, 3, 4, 5]
 
+//--------------------
+// Iterate Odd Numbers With a For Loop
+
+/* Question
+Push the odd numbers from 1 through 9 to myArray using a for loop.
+*/
+
+// Example
+var ourArray = [];
+
+for (var i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray3 = [];
+
+// Only change code below this line.
+
+for (var i = 1; i < 10; i += 2) {
+  myArray3.push(i)
+}
+
+console.log(myArray3); // (5) [1, 3, 5, 7, 9]
