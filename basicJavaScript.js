@@ -1666,3 +1666,18 @@ function checkEqual(a, b) {
 
 console.log(checkEqual(1, 2)); // Not Equal
 console.log(checkEqual(2, 2)); // Equal
+
+//--------------------
+// Use Multiple Conditional (Ternary) Operators
+
+/* Question
+Use multiple conditional operators in the checkSign function to check if a number is positive, negative or zero. The function should return "positive", "negative" or "zero".
+*/
+
+function checkSign(num) {
+  return (num > 0) ? "positive" : (num < 0) ? "negative" : "zero";
+}
+
+console.log(checkSign(10)); // positive
+console.log(checkSign(-10)); // negative
+console.log(checkSign(0)); // zero
