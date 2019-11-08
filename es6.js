@@ -58,3 +58,25 @@ function printManyTimes(str) {
 
 }
 printManyTimes("freeCodeCamp");
+
+//--------------------
+// Mutate an Array Declared with const
+
+/* Question
+An array is declared as const s = [5, 7, 2]. Change the array to [2, 5, 7] using various element assignment.
+*/
+
+const s = [5, 7, 2];
+function editInPlace() {
+    'use strict';
+    // change code below this line
+
+    // s = [2, 5, 7]; <- this is invalid
+    s[0] = 2;
+    s[1] = 5;
+    s[2] = 7;
+    // change code above this line
+}
+editInPlace();
+console.log(s) // (3) [2, 5, 7]
+
