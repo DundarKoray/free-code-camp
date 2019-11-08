@@ -1639,3 +1639,16 @@ function convertToInteger(str) {
 }
 
 console.log(convertToInteger("56")); // 56
+
+//--------------------
+// Use the parseInt Function
+
+/* Question
+Use parseInt() in the convertToInteger function so it converts the input string str into an integer, and returns it.
+*/
+
+function convertToInteger2(str) {
+  return parseInt(str, 2)
+}
+
+console.log(convertToInteger2("10011"));
