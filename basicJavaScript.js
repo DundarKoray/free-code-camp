@@ -1136,18 +1136,18 @@ Convert the switch statement into an object called lookup. Use it to look up val
 
 // Setup
 function phoneticLookup(val) {
-  
+
   // Only change code below this line
   var lookup = {
     "alpha": "Adams",
     "bravo": "Boston",
     "charlie": "Chicago",
     "delta": "Denver",
-    "echo" : "Easy",
+    "echo": "Easy",
     "foxtrot": "Frank"
   }
   var result = lookup[val];
-  
+
   // Only change code above this line
   return result;
 }
@@ -1171,7 +1171,7 @@ var myObj = {
 
 function checkObj(checkProp) {
   // Your Code Here
-  if(myObj.hasOwnProperty(checkProp)) {
+  if (myObj.hasOwnProperty(checkProp)) {
     return myObj[checkProp]
   } else {
     return "Not Found"
@@ -1202,7 +1202,7 @@ var myMusic = [
     "gold": true
   }
   // Add record here
-  ,{
+  , {
     "artist": "Bon Jovi",
     "title": "It's My Life",
     "release_year": 1999,
@@ -1227,7 +1227,7 @@ var myStorage = {
     "inside": {
       "glove box": "maps",
       "passenger seat": "crumbs"
-     },
+    },
     "outside": {
       "trunk": "jack"
     }
@@ -1309,7 +1309,7 @@ var collection = {
   },
   1245: {
     artist: "Robert Palmer",
-    tracks: [ ]
+    tracks: []
   },
   5439: {
     album: "ABBA Gold",
@@ -1319,7 +1319,7 @@ var collection = {
 
 // Only change code below this line
 function updateRecords(id, prop, value) {
-  if(value === "") {
+  if (value === "") {
     delete collection[id][prop];
   } else if (prop === "tracks") {
     //if prop tracks does not exist create an empty array
@@ -1328,7 +1328,7 @@ function updateRecords(id, prop, value) {
   } else {
     collection[id][prop] = value
   }
-    
+
 
   return collection;
 }
@@ -1358,7 +1358,7 @@ var myArray = [];
 console.log(myArray) // [] (empty array) 
 
 var i = 0;
-while(i < 5) {
+while (i < 5) {
   myArray.push(i);
   i++;
 }
@@ -1446,7 +1446,7 @@ Declare and initialize a variable total to 0. Use a for loop to add the value of
 */
 
 // Example
-var ourArr = [ 9, 10, 11, 12];
+var ourArr = [9, 10, 11, 12];
 var ourTotal = 0;
 
 for (var i = 0; i < ourArr.length; i++) {
@@ -1454,12 +1454,12 @@ for (var i = 0; i < ourArr.length; i++) {
 }
 
 // Setup
-var myArr7 = [ 2, 3, 4, 5, 6];
+var myArr7 = [2, 3, 4, 5, 6];
 
 // Only change code below this line
 var total = 0;
 
-for(var i = 0; i < myArr7.length; i++) {
+for (var i = 0; i < myArr7.length; i++) {
   total = total + myArr7[i];
 }
 
@@ -1475,8 +1475,8 @@ Modify function multiplyAll so that it multiplies the product variable by each n
 function multiplyAll(arr) {
   var product = 1;
   // Only change code below this line
-  for (var i = 0; i < arr.length; i++){
-    for(var j = 0; j < arr[i].length; j++){
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr[i].length; j++) {
       product *= arr[i][j];
     }
   }
@@ -1524,38 +1524,38 @@ If prop does not correspond to any valid properties of a contact found to match 
 //Setup
 var contacts = [
   {
-      "firstName": "Akira",
-      "lastName": "Laine",
-      "number": "0543236543",
-      "likes": ["Pizza", "Coding", "Brownie Points"]
+    "firstName": "Akira",
+    "lastName": "Laine",
+    "number": "0543236543",
+    "likes": ["Pizza", "Coding", "Brownie Points"]
   },
   {
-      "firstName": "Harry",
-      "lastName": "Potter",
-      "number": "0994372684",
-      "likes": ["Hogwarts", "Magic", "Hagrid"]
+    "firstName": "Harry",
+    "lastName": "Potter",
+    "number": "0994372684",
+    "likes": ["Hogwarts", "Magic", "Hagrid"]
   },
   {
-      "firstName": "Sherlock",
-      "lastName": "Holmes",
-      "number": "0487345643",
-      "likes": ["Intriguing Cases", "Violin"]
+    "firstName": "Sherlock",
+    "lastName": "Holmes",
+    "number": "0487345643",
+    "likes": ["Intriguing Cases", "Violin"]
   },
   {
-      "firstName": "Kristian",
-      "lastName": "Vos",
-      "number": "unknown",
-      "likes": ["JavaScript", "Gaming", "Foxes"]
+    "firstName": "Kristian",
+    "lastName": "Vos",
+    "number": "unknown",
+    "likes": ["JavaScript", "Gaming", "Foxes"]
   }
 ];
 
 
-function lookUpProfile(name, prop){
-// Only change code below this line
-  for(var i = 0; i < contacts.length; i++) {
-    if(contacts[i].firstName === name) {
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+  for (var i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
       return contacts[i][prop] || "No such property"
-    } 
+    }
   }
   return "No such contact"
 }
@@ -1625,4 +1625,17 @@ function randomRange(myMin, myMax) {
 }
 
 // Change these values to test your function
-var myRandom = randomRange(5, 15);
+var myRandom = randomRange(5, 15); // 5
+
+//--------------------
+// Use the parseInt Function
+
+/* Question
+Use parseInt() in the convertToInteger function so it converts the input string str into an integer, and returns it.
+*/
+
+function convertToInteger(str) {
+  return parseInt(str)
+}
+
+console.log(convertToInteger("56")); // 56
