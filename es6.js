@@ -157,8 +157,22 @@ const sum = (x, y, z) => {
 console.log(sum(10, 20, 30)); // 60
 */
 
-const sum = (...args) => {
+const sum1 = (...args) => {
     return args.reduce((a,b) => a + b, 0);
-  }
+}
   
-  console.log(sum(10, 20, 30)) // 60
+console.log(sum1(10, 20, 30)) // 60
+
+//--------------------
+// Use the Spread Operator to Evaluate Arrays In-Place
+
+/* Question
+Copy all contents of arr1 into another array arr2 using the spread operator.
+*/
+
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+
+arr2 = [...arr1];  // change this line
+
+console.log(arr2); // (5) ["JAN", "FEB", "MAR", "APR", "MAY"]
