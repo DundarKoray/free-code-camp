@@ -188,16 +188,45 @@ const HIGH_TEMPERATURES = {
     yesterday: 75,
     today: 77,
     tomorrow: 80
-  };
+};
   
-  // change code below this line
+// change code below this line
   
 //   const today = HIGH_TEMPERATURES.today;
 const {today, tomorrow} = HIGH_TEMPERATURES
 //   const tomorrow = HIGH_TEMPERATURES.tomorrow;
   
-  // change code above this line
+// change code above this line
   
-  //console.log(yesterday) // should be not defined
-  console.log(today); // should be 77
-  console.log(tomorrow); // should be 80
+//console.log(yesterday) // should be not defined
+console.log(today); // should be 77
+
+
+console.log(tomorrow); // should be 80
+
+//--------------------
+// Use Destructuring Assignment to Assign Variables from Objects
+
+/* Question
+Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables highToday and highTomorrow the values of today and tomorrow from the HIGH_TEMPERATURES object.
+*/
+
+const HIGH_TEMPERATURES2 = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80
+};
+  
+// change code below this line
+    
+// const highToday = HIGH_TEMPERATURES2.today;
+// const highTomorrow = HIGH_TEMPERATURES2.tomorrow; 
+
+const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES2
+
+// change code above this line
+  
+//console.log(yesterday) // should be not defined
+console.log(highToday); // should be 77
+console.log(HIGH_TEMPERATURES2.today); // should be 77
+console.log(highTomorrow); // should be 80
