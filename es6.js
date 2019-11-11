@@ -143,3 +143,22 @@ const increment = (number, value = 1) => number + value;
 
 console.log(increment(5, 2)); // returns 7
 console.log(increment(5)); // returns 6
+
+//--------------------
+// Use the Rest Parameter with Function Parameters
+
+/* Question
+Modify the function sum using the rest parameter in such a way that the function sum is able to take any number of arguments and return their sum.
+
+const sum = (x, y, z) => {
+  const args = [x, y, z];
+  return args.reduce((a, b) => a + b, 0);
+}
+console.log(sum(10, 20, 30)); // 60
+*/
+
+const sum = (...args) => {
+    return args.reduce((a,b) => a + b, 0);
+  }
+  
+  console.log(sum(10, 20, 30)) // 60
