@@ -525,11 +525,11 @@ The code in this file requires the contents of the file: string_functions.js, th
 /* Question
 The following function should be the fallback value for the module. Please add the necessary code to do so.
 */
-
+/*
 export default function subtract(x, y) {
     return x - y;
   }
-
+*/
 //--------------------
 // Import a Default Export
 
@@ -549,7 +549,7 @@ In the following code, import the default export from the math_functions.js file
 Create a new promise called makeServerRequest. Pass in a function with resolve and reject parameters to the constructor.
 */
 
-const makeServerRequest = new Promise((resolve, reject) =>{
+const makeServerRequest3 = new Promise((resolve, reject) =>{
     
 })
 
@@ -564,6 +564,7 @@ Make the promise handle success and failure. If responseFromServer is true, call
 const makeServerRequest = new Promise((resolve, reject) => {
     // responseFromServer represents a response from a server
     let responseFromServer;
+    responseFromServer = true;
       
     if(responseFromServer) {
       resolve("We got the data")
@@ -571,3 +572,25 @@ const makeServerRequest = new Promise((resolve, reject) => {
       reject("Data not received")
     }
   });
+
+//--------------------
+// Handle a Fulfilled Promise with then
+
+/* Question
+Add the then method to your promise. Use result as the parameter of its callback function and log result to the console.
+*/
+
+const makeServerRequest1 = new Promise((resolve, reject) => {
+    // responseFromServer is set to true to represent a successful response from a server
+    let responseFromServer = true;
+      
+    if(responseFromServer) {
+      resolve("We got the data");
+    } else {  
+      reject("Data not received");
+    }
+  });
+
+  makeServerRequest1.then(result => {
+      console.log(result)
+  })
