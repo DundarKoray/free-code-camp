@@ -230,3 +230,27 @@ const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES2
 console.log(highToday); // should be 77
 console.log(HIGH_TEMPERATURES2.today); // should be 77
 console.log(highTomorrow); // should be 80
+
+//--------------------
+// Use Destructuring Assignment to Assign Variables from Nested Objects
+
+/* Question
+Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values of today.low and today.high from the LOCAL_FORECAST object.
+*/
+
+const LOCAL_FORECAST = {
+    yesterday: { low: 61, high: 75 },
+    today: { low: 64, high: 77 },
+    tomorrow: { low: 68, high: 80 }
+};
+  
+// change code below this line
+    
+//   const lowToday = LOCAL_FORECAST.today.low;
+const {today:{ low: lowToday2, high: highToday2 }} = LOCAL_FORECAST
+//   const highToday = LOCAL_FORECAST.today.high;
+  
+// change code above this line
+  
+  console.log(lowToday2); // should be 64
+  console.log(highToday2); // should be 77
