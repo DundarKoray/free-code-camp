@@ -518,3 +518,14 @@ The code in this file requires the contents of the file: string_functions.js, th
 
 //stringFunctions.uppercaseString("hello");
 //stringFunctions.lowercaseString("WORLD!");
+
+//--------------------
+// Create an Export Fallback with export default
+
+/* Question
+The following function should be the fallback value for the module. Please add the necessary code to do so.
+*/
+
+export default function subtract(x, y) {
+    return x - y;
+  }
