@@ -51,3 +51,16 @@ let fccRegex = /FREEcOdEcaMP/i; // Change this line
 let result5 = fccRegex.test(myString1);
 
 console.log(result5) // true
+
+//--------------------
+// Extract Matches
+
+/* Question
+Apply the .match() method to extract the word coding.
+*/
+
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; // Change this line
+let result6 = extractStr.match(codingRegex); // Change this line
+
+console.log(result6)
