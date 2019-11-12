@@ -346,3 +346,30 @@ const result = {
    **/
   const resultDisplayArray = makeList(result.failure);
   console.log(resultDisplayArray)
+
+//--------------------
+// Write Concise Object Literal Declarations Using Object Property Shorthand
+
+/* Question
+Use object property shorthand with object literals to create and return an object with name, age and gender properties.
+*/
+
+const createPerson = (name, age, gender) => {
+    "use strict";
+    // change code below this line
+    /*
+    return {
+      name: name,
+      age: age,
+      gender: gender
+    };
+    */
+
+    return ({
+        name,
+        age,
+        gender
+    })
+    // change code above this line
+  };
+  console.log(createPerson("Zodiac Hasbro", 56, "male")); // returns a proper object
