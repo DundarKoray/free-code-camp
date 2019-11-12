@@ -38,3 +38,16 @@ let petRegex = /dog|cat|bird|fish/; // Change this line
 let result4 = petRegex.test(petString);
 
 console.log(result4) // true
+
+//--------------------
+// Ignore Case While Matching
+
+/* Question
+Write a regex fccRegex to match "freeCodeCamp", no matter its case. Your regex should not match any abbreviations or variations with spaces.
+*/
+
+let myString1 = "freeCodeCamp";
+let fccRegex = /FREEcOdEcaMP/i; // Change this line
+let result5 = fccRegex.test(myString1);
+
+console.log(result5) // true
