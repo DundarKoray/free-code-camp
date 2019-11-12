@@ -22,6 +22,19 @@ Complete the regex waldoRegex to find "Waldo" in the string waldoIsHiding with a
 
 let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
 let waldoRegex = /Waldo/; // Change this line
-let result3 = waldoRegex.test(waldoIsHiding); // true
+let result3 = waldoRegex.test(waldoIsHiding); 
 
-console.log(result3)
+console.log(result3) // true
+
+//--------------------
+// Match a Literal String with Different Possibilities
+
+/* Question
+Complete the regex petRegex to match the pets "dog", "cat", "bird", or "fish".
+*/
+
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // Change this line
+let result4 = petRegex.test(petString);
+
+console.log(result4) // true
