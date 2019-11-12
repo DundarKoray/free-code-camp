@@ -475,3 +475,20 @@ Add a script to the HTML document of type module and give it the source file of 
   </body>
 </html>
 */
+
+//--------------------
+// Use export to Share a Code Block
+
+/* Question
+There are two functions related to strings in the editor. Export both of them using the method of your choice.
+*/
+
+const uppercaseString = (string) => {
+    return string.toUpperCase();
+  }
+  
+  const lowercaseString = (string) => {
+    return string.toLowerCase()
+  }
+
+  export { uppercaseString, lowercaseString}
