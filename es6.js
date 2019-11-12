@@ -529,3 +529,15 @@ The following function should be the fallback value for the module. Please add t
 export default function subtract(x, y) {
     return x - y;
   }
+
+//--------------------
+// Import a Default Export
+
+/* Question
+In the following code, import the default export from the math_functions.js file, found in the same directory as this file. Give the import the name subtract.
+*/
+
+// import subtract from './math_functions.js'
+// add code above this line
+
+// subtract(7,4);
