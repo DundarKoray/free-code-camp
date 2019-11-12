@@ -491,7 +491,7 @@ const uppercaseString = (string) => {
     return string.toLowerCase()
   }
 
-  export { uppercaseString, lowercaseString}
+  //export { uppercaseString, lowercaseString}
 
   //--------------------
 // Reuse Javascript Code Using import
@@ -505,3 +505,16 @@ Add the appropriate import statement that will allow the current file to use the
 
 uppercaseString("hello");
 lowercaseString("WORLD!");
+
+//--------------------
+// Use * to Import Everything from a File
+
+/* Question
+The code in this file requires the contents of the file: string_functions.js, that is in the same directory as the current file. Use the import * as syntax to import everything from the file into an object called stringFunctions.
+*/
+
+//import * as stringFunctions from './string_functions.js'
+// add code above this line
+
+//stringFunctions.uppercaseString("hello");
+//stringFunctions.lowercaseString("WORLD!");
