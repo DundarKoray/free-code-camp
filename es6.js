@@ -404,7 +404,7 @@ The Vegetable lets you create a vegetable object, with a property name, to be pa
 /* Alter code below this line */
 class Vegetable {
     constructor(name){
-        this.name = name;
+        this.sebzeIsmi = name;
     }
 }
 /* Alter code above this line */
@@ -412,4 +412,50 @@ class Vegetable {
 
 const carrot = new Vegetable('carrot');
 console.log(carrot) // => should be an object
-console.log(carrot.name); // => should be 'carrot'
+console.log(carrot.sebzeIsmi); // => should be 'carrot'
+
+//--------------------
+// Use getters and setters to Control Access to an Object
+
+/* Question
+Use class keyword to create a Thermostat class. The constructor accepts Fahrenheit temperature.
+
+Now create getter and setter in the class, to obtain the temperature in Celsius scale.
+
+Remember that C = 5/9 * (F - 32) and F = C * 9.0 / 5 + 32, where F is the value of temperature in Fahrenheit scale, and C is the value of the same temperature in Celsius scale
+
+Note:
+When you implement this, you would be tracking the temperature inside the class in one scale - either Fahrenheit or Celsius.
+
+This is the power of getter or setter - you are creating an API for another user, who would get the correct result, no matter which one you track.
+
+In other words, you are abstracting implementation details from the consumer.
+*/
+
+/* Alter code below this line */
+class Thermostat {
+    constructor(fahrenheit) {
+        this.fahrenheit = fahrenheit;
+    }
+
+    //getter
+    get temperature() {
+        return 5/9 * (this.fahrenheit - 32)
+    }
+    
+    //setter
+    set temperature(celsius) {
+        this.fahrenheit = (celsius * 9.0) / 5 + 32;
+    }
+}
+/* Alter code above this line */
+
+const thermos = new Thermostat(76); // setting in Fahrenheit scale
+
+console.log(thermos)
+let temp = thermos.temperature; // 24.44 in C
+console.log(temp); // 24.44
+
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in C
+
