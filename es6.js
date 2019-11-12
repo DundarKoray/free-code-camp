@@ -541,3 +541,14 @@ In the following code, import the default export from the math_functions.js file
 // add code above this line
 
 // subtract(7,4);
+
+//--------------------
+// Create a JavaScript Promise
+
+/* Question
+Create a new promise called makeServerRequest. Pass in a function with resolve and reject parameters to the constructor.
+*/
+
+const makeServerRequest = new Promise((resolve, reject) =>{
+    
+})
