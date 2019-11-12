@@ -391,3 +391,25 @@ const bicycle = {
   // change code above this line
   bicycle.setGear(3);
   console.log(bicycle.gear);
+
+//--------------------
+// Use class Syntax to Define a Constructor Function
+
+/* Question
+Use class keyword and write a proper constructor to create the Vegetable class.
+
+The Vegetable lets you create a vegetable object, with a property name, to be passed to constructor.
+*/
+
+/* Alter code below this line */
+class Vegetable {
+    constructor(name){
+        this.name = name;
+    }
+}
+/* Alter code above this line */
+
+
+const carrot = new Vegetable('carrot');
+console.log(carrot) // => should be an object
+console.log(carrot.name); // => should be 'carrot'
