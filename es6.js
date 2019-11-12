@@ -373,3 +373,21 @@ const createPerson = (name, age, gender) => {
     // change code above this line
   };
   console.log(createPerson("Zodiac Hasbro", 56, "male")); // returns a proper object
+
+//--------------------
+// Write Concise Declarative Functions with ES6
+
+/* Question
+Refactor the function setGear inside the object bicycle to use the shorthand syntax described above.
+*/
+
+// change code below this line
+const bicycle = {
+    gear: 2,
+    setGear: function(newGear) {
+      this.gear = newGear;
+    }
+  };
+  // change code above this line
+  bicycle.setGear(3);
+  console.log(bicycle.gear);
