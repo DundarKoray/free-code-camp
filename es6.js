@@ -459,3 +459,19 @@ console.log(temp); // 24.44
 thermos.temperature = 26;
 temp = thermos.temperature; // 26 in C
 
+//--------------------
+// Create a Module Script
+
+/* Question
+Add a script to the HTML document of type module and give it the source file of index.js
+*/
+
+/*
+<html>
+  <body>
+    <!-- add your code below -->
+    <script type="module" src="index.js"></script>
+    <!-- add your code above -->
+  </body>
+</html>
+*/
