@@ -110,3 +110,20 @@ let result9 = quoteSample.match(vowelRegex); // Change this line
 
 console.log(result9)
 //(25) ["e", "a", "e", "o", "u", "i", "e", "a", "o", "e", "o", "e", "I", "a", "e", "o", "o", "e", "i", "o", "e", "o", "i", "e", "i"]
+
+/* Question
+you want to match "bag", "big", and "bug" but not "bog". Create the regex /to do this. 
+
+Note
+The [aiu] is the character class that will only match the characters "a", "i",or "u".
+*/
+
+let bigStr = "big";
+let bagStr = "bag";
+let bugStr = "bug";
+let bogStr = "bog";
+let bgRegex = /b[iau]g/
+console.log(bigStr.match(bgRegex)); // Returns ["big"]
+console.log(bagStr.match(bgRegex)); // Returns ["bag"]
+console.log(bugStr.match(bgRegex)); // Returns ["bug"]
+console.log(bogStr.match(bgRegex)); // Returns null
