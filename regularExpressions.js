@@ -144,3 +144,18 @@ let alphabetRegex = /[a-z]/gi; // Change this line
 let result10 = quoteSample1.match(alphabetRegex); // Change this line
 
 console.log(result10);
+
+
+//--------------------
+// Match Numbers and Letters of the Alphabet
+
+/* Question
+Create a single regex that matches a range of letters between h and s, and a range of numbers between 2 and 6. Remember to include the appropriate flags in the regex.
+*/
+
+let quoteSample2 = "Blueberry 3.141592653s are delicious.";
+let myRegex1 = /[h-s2-6]/ig; // Change this line
+let result11 = quoteSample2.match(myRegex1); // Change this line
+
+console.log(result11)
+// (17) ["l", "r", "r", "3", "4", "5", "2", "6", "5", "3", "s", "r", "l", "i", "i", "o", "s"]
