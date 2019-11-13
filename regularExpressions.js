@@ -318,3 +318,16 @@ let countWhiteSpace = /\s/g; // Change this line
 let result24 = sample.match(countWhiteSpace);
 
 console.log(result24) // (5) [" ", " ", " ", " ", " "]
+
+//--------------------
+// Match Non-Whitespace Characters
+
+/* Question
+Change the regex countNonWhiteSpace to look for multiple non-whitespace characters in a string.
+*/
+
+let sample1 = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Change this line
+let result25 = sample1.match(countNonWhiteSpace);
+
+console.log(result25) // 38 (without white space)
