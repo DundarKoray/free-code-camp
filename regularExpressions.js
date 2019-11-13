@@ -154,8 +154,22 @@ Create a single regex that matches a range of letters between h and s, and a ran
 */
 
 let quoteSample2 = "Blueberry 3.141592653s are delicious.";
-let myRegex1 = /[h-s2-6]/ig; // Change this line
-let result11 = quoteSample2.match(myRegex1); // Change this line
+let myRegex2 = /[h-s2-6]/ig; // Change this line
+let result11 = quoteSample2.match(myRegex2); // Change this line
 
 console.log(result11)
 // (17) ["l", "r", "r", "3", "4", "5", "2", "6", "5", "3", "s", "r", "l", "i", "i", "o", "s"]
+
+//--------------------
+// Match Single Characters Not Specified
+
+/* Question
+Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+*/
+
+let quoteSample3 = "3 blind mice.";
+let myRegex3 = /[^0-9aeoui]/g; // Change this line
+let result12 = quoteSample3.match(myRegex3); // Change this line
+
+console.log(result12) // (9) [" ", "b", "l", "n", "d", " ", "m", "c", "."]
+
