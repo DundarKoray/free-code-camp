@@ -123,7 +123,24 @@ let bagStr = "bag";
 let bugStr = "bug";
 let bogStr = "bog";
 let bgRegex = /b[iau]g/
+
 console.log(bigStr.match(bgRegex)); // Returns ["big"]
 console.log(bagStr.match(bgRegex)); // Returns ["bag"]
 console.log(bugStr.match(bgRegex)); // Returns ["bug"]
 console.log(bogStr.match(bgRegex)); // Returns null
+
+//--------------------
+// Match Letters of the Alphabet
+
+/* Question
+Match all the letters in the string quoteSample.
+
+Note
+Be sure to match both upper- and lowercase letters.
+*/
+
+let quoteSample1 = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi; // Change this line
+let result10 = quoteSample1.match(alphabetRegex); // Change this line
+
+console.log(result10);
