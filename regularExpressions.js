@@ -189,3 +189,17 @@ let result14 = difficultSpelling.match(myRegexB);
 
 console.log(result13) // (2) ["ss", "ss"]
 console.log(result14) // (2) ["s", "s", "s", "s"]
+
+//--------------------
+// Match Characters that Occur Zero or More Times
+
+/* Question
+For this challenge, chewieQuote has been initialized as "Aaaaaaaaaaaaaaaarrrgh!" behind the scenes. Create a regex chewieRegex that uses the * character to match an uppercase "A" character immediately followed by zero or more lowercase "a" characters in chewieQuote. Your regex does not need flags or character classes, and it should not match any of the other quotes.
+*/
+
+let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+let chewieRegex = /Aa*/; // Only change this line
+let result15 = chewieQuote.match(chewieRegex);
+
+console.log(result15)
+// ["Aaaaaaaaaaaaaaaa", index: 0, input: "Aaaaaaaaaaaaaaaarrrgh!", groups: undefined]
