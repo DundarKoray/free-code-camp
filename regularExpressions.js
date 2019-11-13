@@ -173,3 +173,19 @@ let result12 = quoteSample3.match(myRegex3); // Change this line
 
 console.log(result12) // (9) [" ", "b", "l", "n", "d", " ", "m", "c", "."]
 
+//--------------------
+// Match Characters that Occur One or More Times
+
+/* Question
+You want to find matches when the letter s occurs one or more times in "Mississippi". Write a regex that uses the + sign.
+*/
+
+let difficultSpelling = "Mississippi";
+let myRegexA = /s+/gi; // Change this line
+let myRegexB = /s/gi; // Change this line
+let result13 = difficultSpelling.match(myRegexA);
+let result14 = difficultSpelling.match(myRegexB);
+
+
+console.log(result13) // (2) ["ss", "ss"]
+console.log(result14) // (2) ["s", "s", "s", "s"]
