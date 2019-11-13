@@ -304,4 +304,17 @@ Notes
 
 let username = "JackOfAllTrades";
 const userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i;
-let result = userCheck.test(username);
+let result23 = userCheck.test(username);
+
+//--------------------
+// Match Whitespace
+
+/* Question
+Change the regex countWhiteSpace to look for multiple whitespace characters in a string.
+*/
+
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let result24 = sample.match(countWhiteSpace);
+
+console.log(result24) // (5) [" ", " ", " ", " ", " "]
