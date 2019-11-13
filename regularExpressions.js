@@ -217,3 +217,19 @@ let result16 = text.match(myRegex16);
 
 console.log(result16)
 // ["<h1>", index: 0, input: "<h1>Winter is coming</h1>", groups: undefined]
+
+//--------------------
+// Match Beginning String Patterns
+
+/* Question
+Use the caret character in a regex to find "Cal" only in the beginning of the string rickyAndCal.
+*/
+
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // Change this line
+let calRegex1 = /^Ricky/; // Change this line
+let result17 = rickyAndCal.match(calRegex);
+let result18 = rickyAndCal.match(calRegex1);
+
+console.log(result17)
+console.log(result18) // null
