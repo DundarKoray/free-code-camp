@@ -233,3 +233,16 @@ let result18 = rickyAndCal.match(calRegex1);
 
 console.log(result17)
 console.log(result18) // null
+
+//--------------------
+// Match All Letters and Numbers
+
+/* Question
+Use the shorthand character class \w to count the number of alphanumeric characters in various quotes and strings.
+*/
+
+let quoteSample4 = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // Change this line
+let result19 = quoteSample4.match(alphabetRegexV2).length;
+
+console.log(result19)  // 31
