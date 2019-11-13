@@ -203,3 +203,17 @@ let result15 = chewieQuote.match(chewieRegex);
 
 console.log(result15)
 // ["Aaaaaaaaaaaaaaaa", index: 0, input: "Aaaaaaaaaaaaaaaarrrgh!", groups: undefined]
+
+//--------------------
+// Find Characters with Lazy Matching
+
+/* Question
+Fix the regex /<.*>/ to return the HTML tag <h1> and not the text "<h1>Winter is coming</h1>". Remember the wildcard . in a regular expression matches any character.
+*/
+
+let text = "<h1>Winter is coming</h1>";
+let myRegex16 = /<h1>?/; // Change this line
+let result16 = text.match(myRegex16);
+
+console.log(result16)
+// ["<h1>", index: 0, input: "<h1>Winter is coming</h1>", groups: undefined]
