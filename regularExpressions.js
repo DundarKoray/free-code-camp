@@ -22,7 +22,7 @@ Complete the regex waldoRegex to find "Waldo" in the string waldoIsHiding with a
 
 let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
 let waldoRegex = /Waldo/; // Change this line
-let result3 = waldoRegex.test(waldoIsHiding); 
+let result3 = waldoRegex.test(waldoIsHiding);
 
 console.log(result3) // true
 
@@ -285,3 +285,16 @@ let noNumRegex = /\D/g; // Change this line
 let result22 = movieName1.match(noNumRegex).length;
 
 console.log(result22) // 17
+
+//--------------------
+// Specify Upper and Lower Number of Matches
+
+/* Question
+Change the regex ohRegex to match the entire phrase "Oh no" only when it has 3 to 6 letter h's.
+*/
+
+let ohStr = "Ohhh no";
+let ohRegex = /oh{3,6}\sno/i; // Change this line
+let result23 = ohRegex.test(ohStr);
+
+console.log(result23) // true
