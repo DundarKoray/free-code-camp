@@ -367,3 +367,16 @@ let result29 = myRegex29.test(myString29); // Change this line
 
 console.log(result29)
 // After passing the challenge experiment with myString and see how the grouping works
+
+//--------------------
+// Reuse Patterns Using Capture Groups
+
+/* Question
+Use capture groups in reRegex to match numbers that are repeated only three times in a string, each separated by a space.
+*/
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let result30 = reRegex.test(repeatNum);
+
+console.log(result30)
