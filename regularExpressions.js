@@ -311,3 +311,16 @@ let haRegex = /haz{4,}ah/i; // Change this line
 let result24 = haRegex.test(haStr);
 
 console.log(result24); // true
+
+//--------------------
+// Specify Exact Number of Matches
+
+/* Question
+Change the regex timRegex to match the word "Timber" only when it has four letter m's.
+*/
+
+let timStr = "Timmmmber";
+let timRegex = /tim{4}ber/i; // Change this line
+let result25 = timRegex.test(timStr);
+
+console.log(result25) // true   
