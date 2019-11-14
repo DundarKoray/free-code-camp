@@ -121,6 +121,36 @@ if (x == y) {
 
 }
 
-console.log(result33);
+console.log(result33); //Not Equal
 
 //SOLUTION NOTE: Equal mark changed from "=" to "=="
+
+//--------------------
+// Catch Missing Open and Closing Parenthesis After a Function Call
+
+/*
+function getNine() {
+  let x = 6;
+  let y = 3;
+  return x + y;
+}
+
+let result = getNine;
+console.log(result);
+*/
+
+/* Question
+Fix the code so the variable result is set to the value returned from calling the function getNine.
+*/
+
+function getNine() {
+    let x = 6;
+    let y = 3;
+    return x + y;
+}
+
+let result34 = getNine();
+console.log(result34); // 9
+
+// Solution Note: function was called wrong, changed getNine to getNine()
+
