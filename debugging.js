@@ -69,3 +69,21 @@ Fix the two pair errors in the code.
 let myArray1 = [1, 2, 3];
 let arraySum = myArray1.reduce((previous, current) => previous + current);
 console.log(`Sum of array values is: ${arraySum}`); // Sum of array values is: 6
+
+//--------------------
+// Catch Mixed Usage of Single and Double Quotes
+
+/*
+let innerHtml = "<p>Click here to <a href="#Home">return home</a></p>";
+console.log(innerHtml);
+*/
+
+/* Question
+Fix the string so it either uses different quotes for the href value, or escape the existing ones. Keep the double quote marks around the entire string.
+*/
+
+let innerHtml = "<p>Click here to <a href='#Home'>return home</a></p>";
+console.log(innerHtml); // <p>Click here to <a href="#Home">return home</a></p>
+
+// Changed "#Home" to '#Home'
+
