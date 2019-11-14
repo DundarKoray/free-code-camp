@@ -16,3 +16,17 @@ a1++;
 let sumAB = a + b1;
 console.log(sumAB); // 7
 console.log(a1) // 6
+
+//--------------------
+// Use typeof to Check the Type of a Variable
+
+/* Question
+Add two console.log() statements to check the typeof each of the two variables seven and three in the code.
+*/
+
+let seven = 7;
+let three = "3";
+console.log(typeof seven) // number
+console.log(typeof three) // string
+// Add your code below this line
+
