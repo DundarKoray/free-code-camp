@@ -85,5 +85,26 @@ Fix the string so it either uses different quotes for the href value, or escape 
 let innerHtml = "<p>Click here to <a href='#Home'>return home</a></p>";
 console.log(innerHtml); // <p>Click here to <a href="#Home">return home</a></p>
 
-// Changed "#Home" to '#Home'
+// Solution Note: Changed "#Home" to '#Home'
+
+//--------------------
+// Catch Use of Assignment Operator Instead of Equality Operator
+
+let x = 7;
+let y = 9;
+let result33 = "to come";
+
+if (x == y) {
+    result33 = "Equal!";
+
+} else {
+    result33 = "Not equal!";
+
+}
+
+console.log(result33); // Not equal
+
+/* Question
+Fix the condition so the program runs the right branch, and the appropriate value is assigned to result.
+*/
 
