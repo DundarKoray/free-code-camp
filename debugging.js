@@ -26,7 +26,29 @@ Add two console.log() statements to check the typeof each of the two variables s
 
 let seven = 7;
 let three = "3";
+// Add your code below this line
 console.log(typeof seven) // number
 console.log(typeof three) // string
-// Add your code below this line
 
+//--------------------
+// Catch Misspelled Variable and Function Names
+
+/*
+let receivables = 10;
+let payables = 8;
+let netWorkingCapital = recievables - payable;
+console.log(`Net working capital is: ${netWorkingCapital}`);
+
+*/
+
+/* Question
+Fix the two spelling errors in the code so the netWorkingCapital calculation works.
+*/
+
+let receivables = 10;
+let payables = 8;
+let netWorkingCapital = receivables - payables;
+
+console.log(`Net working capital is: ${netWorkingCapital}`)
+
+//NOTE "s" was missing at the end of payable line 39
