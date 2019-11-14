@@ -287,7 +287,6 @@ let result22 = movieName1.match(noNumRegex).length;
 console.log(result22) // 17
 
 //--------------------
-<<<<<<< HEAD
 // Restrict Possible Usernames
 
 /* Question
@@ -332,7 +331,6 @@ let countNonWhiteSpace = /\S/g; // Change this line
 let result25 = sample1.match(countNonWhiteSpace);
 
 console.log(result25) // 38 (without white space)
-=======
 // Specify Upper and Lower Number of Matches
 
 /* Question
@@ -458,4 +456,3 @@ let wsRegex = /^\s+|\s+$/g; // Change this line
 let result32 = hello.replace(wsRegex, ""); // Change this line
 
 console.log(result32) //Hello, World!
->>>>>>> b6c456e66221fe5c0473aa7f555e9ae6a5bef46a
