@@ -181,3 +181,38 @@ let base = 2;
 let exp = 3;
 let power = raiseToPower(base, exp);
 console.log(power); // 8
+
+//--------------------
+// Catch Off By One Errors When Using Indexing
+
+/*
+function countToFive() {
+  let firstFive = "12345";
+  let len = firstFive.length;
+  // Fix the line below
+  for (let i = 1; i <= len; i++) {
+  // Do not alter code below this line
+    console.log(firstFive[i]);
+  }
+}
+
+countToFive();
+*/
+
+/* Question
+Fix the two indexing errors in the following function so all the numbers 1 through 5 are printed to the console.
+*/
+
+
+function countToFive() {
+    let firstFive = "12345";
+    let len = firstFive.length;
+    console.log(len)
+    // Fix the line below
+    for (let i = 0; i < len; i++) {
+        // Do not alter code below this line
+        console.log(firstFive[i]);
+    }
+}
+
+countToFive();
