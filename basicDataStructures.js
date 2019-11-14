@@ -1,0 +1,1 @@
+console.log("--------HELLO FROM BASIC DATA STRUCTURES----------")

@@ -339,9 +339,9 @@ Change the regex ohRegex to match the entire phrase "Oh no" only when it has 3 t
 
 let ohStr = "Ohhh no";
 let ohRegex = /oh{3,6}\sno/i; // Change this line
-let result23 = ohRegex.test(ohStr);
+let result90 = ohRegex.test(ohStr);
 
-console.log(result23) // true
+console.log(result90) // true
 
 //--------------------
 // Specify Only the Lower Number of Matches
@@ -352,9 +352,9 @@ Change the regex haRegex to match the word "Hazzah" only when it has four or mor
 
 let haStr = "Hazzzzah";
 let haRegex = /haz{4,}ah/i; // Change this line
-let result24 = haRegex.test(haStr);
+let result91 = haRegex.test(haStr);
 
-console.log(result24); // true
+console.log(result91); // true
 
 //--------------------
 // Specify Exact Number of Matches
@@ -365,9 +365,9 @@ Change the regex timRegex to match the word "Timber" only when it has four lette
 
 let timStr = "Timmmmber";
 let timRegex = /tim{4}ber/i; // Change this line
-let result25 = timRegex.test(timStr);
+let result92 = timRegex.test(timStr);
 
-console.log(result25) // true   
+console.log(result92) // true   
 
 //--------------------
 // Check for All or None

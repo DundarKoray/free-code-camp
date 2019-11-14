@@ -1,4 +1,4 @@
-console.log("Hello from Debugging.")
+console.log("--------HI FROM DEBUGGING----------")
 
 //--------------------
 // Use the JavaScript Console to Check the Value of a Variable
