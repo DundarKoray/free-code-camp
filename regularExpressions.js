@@ -324,3 +324,19 @@ let timRegex = /tim{4}ber/i; // Change this line
 let result25 = timRegex.test(timStr);
 
 console.log(result25) // true   
+
+//--------------------
+// Check for All or None
+
+/* Question
+Change the regex favRegex to match both the American English (favorite) and the British English (favourite) version of the word.
+*/
+
+let favWordAmerican = "favorite";
+let favWordBritish = "favourite";
+let favRegex = /favou?rite/; // Change this line
+let result26 = favRegex.test(favWordAmerican);
+let result27 = favRegex.test(favWordBritish);
+
+console.log(result26) //ture
+console.log(result27) //ture
