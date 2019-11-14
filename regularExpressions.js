@@ -348,6 +348,22 @@ console.log(result27) //ture
 Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long, do not begin with numbers, and have two consecutive digits.
 */
 
-let sampleWord = "astronaut";
+let sampleWord28 = "astronaut";
 let pwRegex = /^(?=\w{6,})(?=\D*\d{2})/; // Change this line
-let result = pwRegex.test(sampleWord);
+let result28 = pwRegex.test(sampleWord28);
+
+//--------------------
+// Check For Mixed Grouping of Characters
+
+/* Question
+Fix the regex so that it checks for the names of Franklin Roosevelt or Eleanor Roosevelt in a case sensitive manner and it should make concessions for middle names.
+
+Then fix the code so that the regex that you have created is checked against myString and either true or false is returned depending on whether the regex matches.
+*/
+
+let myString29 = "Eleanor D. Roosevelt";
+let myRegex29 = /(Franklin|Eleanor)*Roosevelt/g; // Change this line
+let result29 = myRegex29.test(myString29); // Change this line
+
+console.log(result29)
+// After passing the challenge experiment with myString and see how the grouping works
