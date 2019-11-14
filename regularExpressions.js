@@ -380,3 +380,17 @@ let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
 let result30 = reRegex.test(repeatNum);
 
 console.log(result30)
+
+//--------------------
+// Use Capture Groups to Search and Replace
+
+/* Question
+Write a regex so that it will search for the string "good". Then update the replaceText variable to replace "good" with "okey-dokey".
+*/
+
+let huhText = "This sandwich is good.";
+let fixRegex = /good/; // Change this line
+let replaceText = "okey-dokey"; // Change this line
+let result31 = huhText.replace(fixRegex, replaceText);
+
+console.log(result31) // This sandwich is okey - dokey.
