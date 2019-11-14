@@ -298,3 +298,16 @@ let ohRegex = /oh{3,6}\sno/i; // Change this line
 let result23 = ohRegex.test(ohStr);
 
 console.log(result23) // true
+
+//--------------------
+// Specify Only the Lower Number of Matches
+
+/* Question
+Change the regex haRegex to match the word "Hazzah" only when it has four or more letter z's.
+*/
+
+let haStr = "Hazzzzah";
+let haRegex = /haz{4,}ah/i; // Change this line
+let result24 = haRegex.test(haStr);
+
+console.log(result24); // true
