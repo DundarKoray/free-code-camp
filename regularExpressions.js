@@ -22,7 +22,7 @@ Complete the regex waldoRegex to find "Waldo" in the string waldoIsHiding with a
 
 let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
 let waldoRegex = /Waldo/; // Change this line
-let result3 = waldoRegex.test(waldoIsHiding); 
+let result3 = waldoRegex.test(waldoIsHiding);
 
 console.log(result3) // true
 
@@ -287,6 +287,7 @@ let result22 = movieName1.match(noNumRegex).length;
 console.log(result22) // 17
 
 //--------------------
+<<<<<<< HEAD
 // Restrict Possible Usernames
 
 /* Question
@@ -331,3 +332,130 @@ let countNonWhiteSpace = /\S/g; // Change this line
 let result25 = sample1.match(countNonWhiteSpace);
 
 console.log(result25) // 38 (without white space)
+=======
+// Specify Upper and Lower Number of Matches
+
+/* Question
+Change the regex ohRegex to match the entire phrase "Oh no" only when it has 3 to 6 letter h's.
+*/
+
+let ohStr = "Ohhh no";
+let ohRegex = /oh{3,6}\sno/i; // Change this line
+let result23 = ohRegex.test(ohStr);
+
+console.log(result23) // true
+
+//--------------------
+// Specify Only the Lower Number of Matches
+
+/* Question
+Change the regex haRegex to match the word "Hazzah" only when it has four or more letter z's.
+*/
+
+let haStr = "Hazzzzah";
+let haRegex = /haz{4,}ah/i; // Change this line
+let result24 = haRegex.test(haStr);
+
+console.log(result24); // true
+
+//--------------------
+// Specify Exact Number of Matches
+
+/* Question
+Change the regex timRegex to match the word "Timber" only when it has four letter m's.
+*/
+
+let timStr = "Timmmmber";
+let timRegex = /tim{4}ber/i; // Change this line
+let result25 = timRegex.test(timStr);
+
+console.log(result25) // true   
+
+//--------------------
+// Check for All or None
+
+/* Question
+Change the regex favRegex to match both the American English (favorite) and the British English (favourite) version of the word.
+*/
+
+let favWordAmerican = "favorite";
+let favWordBritish = "favourite";
+let favRegex = /favou?rite/; // Change this line
+let result26 = favRegex.test(favWordAmerican);
+let result27 = favRegex.test(favWordBritish);
+
+console.log(result26) //ture
+console.log(result27) //ture
+
+//--------------------
+// Positive and Negative Lookahead
+
+/* Question
+Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long, do not begin with numbers, and have two consecutive digits.
+*/
+
+let sampleWord28 = "astronaut";
+let pwRegex = /^(?=\w{6,})(?=\D*\d{2})/; // Change this line
+let result28 = pwRegex.test(sampleWord28);
+
+//--------------------
+// Check For Mixed Grouping of Characters
+
+/* Question
+Fix the regex so that it checks for the names of Franklin Roosevelt or Eleanor Roosevelt in a case sensitive manner and it should make concessions for middle names.
+
+Then fix the code so that the regex that you have created is checked against myString and either true or false is returned depending on whether the regex matches.
+*/
+
+let myString29 = "Eleanor D. Roosevelt";
+let myRegex29 = /(Franklin|Eleanor)*Roosevelt/g; // Change this line
+let result29 = myRegex29.test(myString29); // Change this line
+
+console.log(result29)
+// After passing the challenge experiment with myString and see how the grouping works
+
+//--------------------
+// Reuse Patterns Using Capture Groups
+
+/* Question
+Use capture groups in reRegex to match numbers that are repeated only three times in a string, each separated by a space.
+*/
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let result30 = reRegex.test(repeatNum);
+
+console.log(result30)
+
+//--------------------
+// Use Capture Groups to Search and Replace
+
+/* Question
+Write a regex so that it will search for the string "good". Then update the replaceText variable to replace "good" with "okey-dokey".
+*/
+
+let huhText = "This sandwich is good.";
+let fixRegex = /good/; // Change this line
+let replaceText = "okey-dokey"; // Change this line
+let result31 = huhText.replace(fixRegex, replaceText);
+
+console.log(result31) // This sandwich is okey - dokey.
+
+//--------------------
+// Remove Whitespace from Start and End
+
+/* Question
+Sometimes whitespace characters around strings are not wanted but are there. Typical processing of strings is to remove the whitespace at the start and end of it.
+
+Write a regex and use the appropriate string methods to remove whitespace at the beginning and end of strings.
+
+Note
+The .trim() method would work here, but you'll need to complete this challenge using regular expressions.
+*/
+
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result32 = hello.replace(wsRegex, ""); // Change this line
+
+console.log(result32) //Hello, World!
+>>>>>>> b6c456e66221fe5c0473aa7f555e9ae6a5bef46a
