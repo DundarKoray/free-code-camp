@@ -52,3 +52,20 @@ let netWorkingCapital = receivables - payables;
 console.log(`Net working capital is: ${netWorkingCapital}`)
 
 //NOTE "s" was missing at the end of payable line 39
+
+//--------------------
+// Catch Unclosed Parentheses, Brackets, Braces and Quotes
+
+/*
+let myArray = [1, 2, 3;
+let arraySum = myArray.reduce((previous, current => previous + current);
+console.log(`Sum of array values is: ${arraySum}`);
+*/
+
+/* Question
+Fix the two pair errors in the code.
+*/
+
+let myArray1 = [1, 2, 3];
+let arraySum = myArray1.reduce((previous, current) => previous + current);
+console.log(`Sum of array values is: ${arraySum}`); // Sum of array values is: 6
