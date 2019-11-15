@@ -183,11 +183,7 @@ indexOf() can be incredibly useful for quickly checking for the presence of an e
 
 function quickCheck(arr, elem) {
     // change code below this line
-    if (arr.indexOf(elem) !== -1) {
-        return true
-    } else {
-        return false
-    }
+    return arr.indexOf(elem) !== -1;
     // change code above this line
 }
 
