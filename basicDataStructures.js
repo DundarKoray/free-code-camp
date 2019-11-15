@@ -56,3 +56,21 @@ function mixedNumbers(arr) {
 console.log(mixedNumbers(['IV', 5, 'six']));
 //["I", 2, "three", "IV", 5, "six", 7, "VII", 9]
 
+//--------------------
+// Remove Items from an Array with pop() and shift()
+
+
+/* Question
+We have defined a function, popShift, which takes an array as an argument and returns a new array. Modify the function, using pop() and shift(), to remove the first and last elements of the argument array, and assign the removed elements to their corresponding variables, so that the returned array contains their values.
+*/
+
+function popShift(arr) {
+    let popped = arr.pop(arr[0]); // change this line
+    let shifted = arr.shift(arr[arr.length - 1]); // change this line
+    return [shifted, popped];
+}
+
+// do not change code below this line
+console.log(popShift(['challenge', 'is', 'not', 'complete']));
+
+//(2)["challenge", "complete"]
