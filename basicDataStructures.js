@@ -380,5 +380,49 @@ let users = {
             }
             
             return false
+    }
+console.log(isEveryoneHere2(users)); // true
+
+//--------------------
+// Iterate Through the Keys of an Object with a for...in Statement
+
+
+/* Question
+We've defined a function countOnline which accepts one argument (a users object). Use a for...in statement within this function to loop through the users object passed into the function and return the number of users whose online property is set to true. An example of a users object which could be passed to countOnline is shown below. Each user will have an online property with either a true or false value.
+*/
+
+let users1 = {
+    Alan: {
+      age: 27,
+      online: false
+    },
+    Jeff: {
+      age: 32,
+      online: true
+    },
+    Sarah: {
+      age: 48,
+      online: false
+    },
+    Ryan: {
+      age: 19,
+      online: true
+    }
+  };
+
+function countOnline(obj) {
+    // change code below this line
+    let result = 0;
+    for( let userX in obj) {
+        if(obj[userX].online === true){
+            result++;
         }
-        console.log(isEveryoneHere2(users)); // true
+    }
+
+    return result;
+    // change code above this line
+}
+
+console.log(countOnline(users1)); // 2
+console.log(users1["Alan"].online) // false
+console.log(users1.Alan.online) // false
