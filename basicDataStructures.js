@@ -306,4 +306,27 @@ let foodsItems = {
   // change code below this line to test different cases:
   console.log(checkInventory("apples")); // 25
 
+//--------------------
+// Use the delete Keyword to Remove Object Properties
+
+
+/* Question
+Use the delete keyword to remove the oranges, plums, and strawberries keys from the foods object.
+*/
+
+let foodsItems1 = {
+    apples: 25,
+    oranges: 32,
+    plums: 28,
+    bananas: 13,
+    grapes: 35,
+    strawberries: 27
+  };
   
+  // change code below this line
+  delete foodsItems1.oranges;
+  delete foodsItems1.plums;
+  delete foodsItems1.strawberries;
+  // change code above this line
+  
+  console.log(foodsItems1);
