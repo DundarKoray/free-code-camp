@@ -14,8 +14,30 @@ function convertToF(celsius) {
     let fahrenheit;
     fahrenheit = (celsius * 9/5) + 32
     return `${celsius}°C is ${fahrenheit}°F.`;
-  }
+}
   
-  console.log(convertToF(30)); // 30°C is 86°F.
+console.log(convertToF(30)); // 30°C is 86°F.
 
+//--------------------
+// Reverse a String
+
+
+/* Question
+Reverse the provided string.
+
+You may need to turn the string into an array before you can reverse it.
+
+Your result must be a string.
+
+Remember to use Read-Search-Ask if you get stuck. Write your own code.
+*/
+
+
+function reverseString(str) {
+    let reversedArray = [];
+    reversedArray= str.split("").reverse().join("");
+    
+    return `Here is reverse of "${str}": ${reversedArray}`;
+}
   
+console.log(reverseString("hello")); // olleh
