@@ -65,6 +65,50 @@ function factorialize(num) {
       product *= num;
     }
     return product;
-  }
+}
   
-  factorialize(5);
+factorialize(5);
+
+//--------------------
+// Find the Longest Word in a String
+
+
+/* Question
+Return the length of the longest word in the provided sentence.
+
+Your response should be a number.
+
+Remember to use Read-Search-Ask if you get stuck. Write your own code.
+*/
+
+// SOLUTION ONE
+
+function findLongestWordLength1(str) {
+    let strArray = []
+    
+    
+    let strArrayLength = Math.max(...str.split(" ").map(item => {
+        return item.length
+    }))
+    
+    return strArrayLength
+}
+  
+console.log(findLongestWordLength1("The quick brown fox jumped over the lazy dog")); // 6
+
+// SOLUTION TWO
+
+function findLongestWordLength2(str) {
+    let words = str.split(" ");
+    var maxLength = 0;
+
+    for (var i = 0; i < words.length; i++) {
+        if (words[i].length > maxLength) {
+            maxLength = words[i].length
+        }
+    }
+
+    return maxLength;
+}
+
+console.log(findLongestWordLength2("The quick brown fox jumped over the lazy dog")); // 6
