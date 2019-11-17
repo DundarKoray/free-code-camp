@@ -256,7 +256,7 @@ let foods = {
   
   console.log(foods);
 
-  //--------------------
+//--------------------
 // Modify an Object Nested Within an Object
 
 
@@ -278,3 +278,32 @@ let userActivity = {
   // change code above this line
   
   console.log(userActivity);
+  console.log(userActivity.data["online"]); // 45
+
+//--------------------
+// Access Property Names with Bracket Notation
+
+
+/* Question
+We've defined a function, checkInventory, which receives a scanned item as an argument. Return the current value of the scannedItem key in the foods object. You can assume that only valid keys will be provided as an argument to checkInventory.
+*/
+
+let foodsItems = {
+    apples: 25,
+    oranges: 32,
+    plums: 28,
+    bananas: 13,
+    grapes: 35,
+    strawberries: 27
+  };
+  // do not change code above this line
+  
+  function checkInventory(scannedItem) {
+    // change code below this line
+    return foodsItems[scannedItem]
+  }
+  
+  // change code below this line to test different cases:
+  console.log(checkInventory("apples")); // 25
+
+  
