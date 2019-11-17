@@ -330,3 +330,55 @@ let foodsItems1 = {
   // change code above this line
   
   console.log(foodsItems1);
+
+//--------------------
+// Check if an Object has a Property
+
+
+/* Question
+We've created an object, users, with some users in it and a function isEveryoneHere, which we pass the users object to as an argument. Finish writing this function so that it returns true only if the users object contains all four names, Alan, Jeff, Sarah, and Ryan, as keys, and false otherwise.
+*/
+
+let users = {
+    Alan: {
+      age: 27,
+      online: true
+    },
+    Jeff: {
+      age: 32,
+      online: true
+    },
+    Sarah: {
+      age: 48,
+      online: true
+    },
+    Ryan: {
+      age: 19,
+      online: true
+    }
+  };
+  
+  //SOLUTION 1
+  function isEveryoneHere(obj) {
+    // change code below this line
+    return ["Alan", "Jeff", "Sarah", "Ryan"].every(item =>{
+        return obj.hasOwnProperty(item)
+    })
+  }
+  console.log('Alan' in users) // true
+  console.log(isEveryoneHere(users)); // true
+  
+  //SOLUTION 2
+  function isEveryoneHere2(obj) {
+      if(
+          obj.hasOwnProperty("Alan") &&
+          obj.hasOwnProperty("Jeff") &&
+          obj.hasOwnProperty("Sarah") &&
+          obj.hasOwnProperty("Ryan")
+          ) {
+              return true
+            }
+            
+            return false
+        }
+        console.log(isEveryoneHere2(users)); // true
