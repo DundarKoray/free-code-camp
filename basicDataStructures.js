@@ -426,3 +426,38 @@ function countOnline(obj) {
 console.log(countOnline(users1)); // 2
 console.log(users1["Alan"].online) // false
 console.log(users1.Alan.online) // false
+
+//--------------------
+// Generate an Array of All Object Keys with Object.keys()
+
+
+/* Question
+Finish writing the getArrayOfUsers function so that it returns an array containing all the properties in the object it receives as an argument.
+*/
+
+let users2 = {
+    Alan: {
+      age: 27,
+      online: false
+    },
+    Jeff: {
+      age: 32,
+      online: true
+    },
+    Sarah: {
+      age: 48,
+      online: false
+    },
+    Ryan: {
+      age: 19,
+      online: true
+    }
+  };
+  
+  function getArrayOfUsers(obj) {
+    // change code below this line
+    return Object.keys(obj)
+    // change code above this line
+  }
+  
+  console.log(getArrayOfUsers(users2));
