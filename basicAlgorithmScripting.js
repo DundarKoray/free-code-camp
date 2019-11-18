@@ -201,3 +201,20 @@ function repeatStringNumTimes2(str, num) {
 }
 
 console.log(repeatStringNumTimes2("Koray", 5)) //KorayKorayKorayKorayKoray
+
+// Truncate a String
+
+/* Question
+Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
+*/
+
+function truncateString(str, num) {
+    // Clear out that junk in your trunk
+    if (str.length > num) {
+        return str.slice(0, num) + "...";
+    }
+
+    return str
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
