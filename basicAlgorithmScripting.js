@@ -156,7 +156,7 @@ Check if a string (first argument, str) ends with the given target string (secon
 This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
 */
 
-// SOLUTION ONE
+// SOLUTION 1
 function confirmEnding(str, target) {
 
     return str.slice(str.length - target.length) === target;
@@ -166,6 +166,13 @@ function confirmEnding(str, target) {
 console.log(confirmEnding("Bastian", "n")); // true 
 console.log(confirmEnding("Koray", "ray")); // true
 console.log(confirmEnding("Emma", "say")); // false
+
+// SOLUTION 2
+function confirmEnding2(str, target) {
+    return str.endsWith(target)
+}
+
+console.log(confirmEnding2("Koray", "ay")); // true
 
 
 /* Question
