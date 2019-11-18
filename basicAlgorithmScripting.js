@@ -147,15 +147,11 @@ function largestOfFour(arr) {
 console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]])); //(4) [5, 27, 39, 1001]
 
 //--------------------
-// Confirm the Ending
+// Repeat a String Repeat a String
 
 
 /* Question
-Check if a string (first argument, str) ends with the given target string (second argument, target).
-
-This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
-
-Remember to use Read-Search-Ask if you get stuck. Write your own code.
+Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number.
 */
 
 function confirmEnding(str, target) {
@@ -172,4 +168,24 @@ console.log(confirmEnding("Koray", "ray")); // true
 console.log(confirmEnding("Emma", "say")); // false
 
 
+/* Question
+Check if a string (first argument, str) ends with the given target string (second argument, target).
 
+This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+
+Remember to use Read-Search-Ask if you get stuck. Write your own code.
+*/
+
+function repeatStringNumTimes(str, num) {
+    // repeat after me
+    let userInput = "";
+
+    while (num > 0) {
+        userInput += str
+        num--
+    }
+
+    return userInput
+}
+
+console.log(repeatStringNumTimes("abc", 3)); // abcabcabc
