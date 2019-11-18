@@ -12,10 +12,10 @@ You are given a variable celsius representing a temperature in Celsius. Use the 
 
 function convertToF(celsius) {
     let fahrenheit;
-    fahrenheit = (celsius * 9/5) + 32
+    fahrenheit = (celsius * 9 / 5) + 32
     return `${celsius}°C is ${fahrenheit}°F.`;
 }
-  
+
 console.log(convertToF(30)); // 30°C is 86°F.
 
 //--------------------
@@ -35,11 +35,11 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 function reverseString(str) {
     let reversedArray = [];
-    reversedArray= str.split("").reverse().join("");
-    
+    reversedArray = str.split("").reverse().join("");
+
     return `Here is reverse of "${str}": ${reversedArray}`;
 }
-  
+
 console.log(reverseString("hello")); // olleh
 
 //--------------------
@@ -62,11 +62,11 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 function factorialize(num) {
     for (var product = 1; num > 0; num--) {
-      product *= num;
+        product *= num;
     }
     return product;
 }
-  
+
 factorialize(5);
 
 //--------------------
@@ -85,15 +85,15 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 function findLongestWordLength1(str) {
     let strArray = []
-    
-    
+
+
     let strArrayLength = Math.max(...str.split(" ").map(item => {
         return item.length
     }))
-    
+
     return strArrayLength
 }
-  
+
 console.log(findLongestWordLength1("The quick brown fox jumped over the lazy dog")); // 6
 
 // SOLUTION TWO
@@ -112,3 +112,37 @@ function findLongestWordLength2(str) {
 }
 
 console.log(findLongestWordLength2("The quick brown fox jumped over the lazy dog")); // 6
+
+
+//--------------------
+// Return Largest Numbers in Arrays
+
+
+/* Question
+Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
+
+Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
+
+Remember to use Read-Search-Ask if you get stuck. Write your own code.
+*/
+
+function largestOfFour(arr) {
+    // You can do this!
+    let results = []
+
+    for (let i = 0; i < arr.length; i++) {
+        let largetsNumber = arr[i][0]
+        console.log(largetsNumber)
+        for (let j = 1; j < arr[i].length; j++) {
+            if (arr[i][j] > largetsNumber) {
+                largetsNumber = arr[i][j]
+            }
+        }
+
+        results[i] = largetsNumber;
+    }
+    return results;
+}
+
+console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+
