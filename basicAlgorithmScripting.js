@@ -174,7 +174,7 @@ function confirmEnding2(str, target) {
 
 console.log(confirmEnding2("Koray", "ay")); // true
 
-
+//--------------------
 /* Question
 Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number.
 
@@ -202,6 +202,8 @@ function repeatStringNumTimes2(str, num) {
 
 console.log(repeatStringNumTimes2("Koray", 5)) //KorayKorayKorayKorayKoray
 
+
+//--------------------
 // Truncate a String
 
 /* Question
@@ -220,7 +222,7 @@ function truncateString(str, num) {
 console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
 
 
-
+//--------------------
 // Finders Keepers
 
 /* Question
@@ -235,6 +237,40 @@ function findElement(arr, func) {
             return num
         }
     }
-  }
+}
   
-  findElement([1, 2, 3, 4], num => num % 2 === 0);
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+//--------------------
+// Boo who
+
+/* Question
+Check if a value is classified as a boolean primitive. Return true or false.
+
+Boolean primitives are true and false.
+*/
+
+// SOLUTION 1
+function booWho(bool) {
+    // What is the new fad diet for ghost developers? The Boolean.
+    if ( bool === true | bool === false) {
+        return true;
+    }
+    return false;
+}
+
+console.log(booWho(null)); // false
+console.log(booWho(false)); // true
+console.log(booWho(true)); // true
+
+// SOLUTION 2
+function booWho2(bool) {
+    if (typeof(bool) === "boolean") {
+        return true;
+    }
+    return false;
+}
+
+console.log(booWho2(null)); // false
+console.log(booWho2(true)); // true
+console.log(booWho2(false)); // true
