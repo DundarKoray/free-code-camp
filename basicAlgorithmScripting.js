@@ -289,7 +289,7 @@ For the purpose of this exercise, you should also capitalize connecting words li
 function titleCase(str) {
     let strArray = str.toLowerCase().split(" ") ;
     let result = strArray.map((item => {
-        return item.replace(item.charAt(0), item.charAt().toUpperCase())
+        return item.replace(item.charAt(0), item.charAt(0).toUpperCase())
     }))
 
     return result.join(" ");
