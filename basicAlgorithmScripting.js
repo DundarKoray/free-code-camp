@@ -333,6 +333,7 @@ Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
 Hint: Try converting each value to a Boolean.
 */
 
+// SOLUTION 1
 function bouncer(arr) {
 
     let newArray = []
@@ -346,3 +347,12 @@ function bouncer(arr) {
 }
   
 console.log(bouncer([7, "ate", "", false, 9])); // (3) [7, "ate", 9]
+console.log(bouncer([undefined, null, 0, "", false, NaN])); // [ ]
+
+// SOLUTION 2
+function bouncer2(arr) {
+    return arr.filter(Boolean)
+}
+
+console.log(bouncer2([7, "ate", "", false, 9])); // (3) [7, "ate", 9]
+console.log(bouncer2([undefined, null, 0, "", false, NaN])); // [ ]
