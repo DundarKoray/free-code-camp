@@ -274,3 +274,29 @@ function booWho2(bool) {
 console.log(booWho2(null)); // false
 console.log(booWho2(true)); // true
 console.log(booWho2(false)); // true
+
+
+//--------------------
+// Title Case a Sentence
+
+/* Question
+Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
+For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
+*/
+
+
+function titleCase(str) {
+    let strArray = str.toLowerCase().split(" ") ;
+    let result = strArray.map((item => {
+        return item.replace(item.charAt(0), item.charAt().toUpperCase())
+    }))
+
+    return result.join(" ");
+}
+  
+console.log(titleCase("I'm a little tea pot"));
+// I'm A Little Tea Pot
+
+
+
