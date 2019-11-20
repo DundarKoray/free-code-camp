@@ -16,3 +16,19 @@ let dog = {
 
 console.log(dog.name) // Tarzan
 console.log(dog.numLegs) // 4
+
+//--------------------
+// Use Dot Notation to Access the Properties of an Object
+
+
+/* Question
+Print both properties of the dog object to your console.
+*/
+
+let dog1 = {
+    name: "Spot",
+    numLegs: 4
+};
+// Add your code below this line
+console.log(dog1.name) // Spot
+console.log(dog1.numLegs) // 4
