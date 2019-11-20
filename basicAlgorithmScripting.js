@@ -421,3 +421,23 @@ console.log(mutation(["hello", "hel"])); // true
 console.log(mutation(["hello", "hey"])); // false
 console.log(mutation(["Noel", "oel"])); // true
 console.log(mutation(["Noel", "OEL"])); // true
+
+
+//--------------------
+//Chunky Monkey
+
+/* Question
+Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+*/
+
+function chunkArrayInGroups(arr, size) {
+    // Break it up.
+    var newArr = [];
+    while (arr.length) {
+        newArr.push(arr.splice(0, size));
+    }
+    return newArr;
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+
