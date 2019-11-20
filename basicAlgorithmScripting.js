@@ -231,14 +231,14 @@ Create a function that looks through an array (first argument) and returns the f
 
 function findElement(arr, func) {
     let num = 0;
-    for (let i = 0; i < arr.length; i++){
+    for (let i = 0; i < arr.length; i++) {
         num = arr[i];
-        if(func(num)) {
+        if (func(num)) {
             return num
         }
     }
 }
-  
+
 findElement([1, 2, 3, 4], num => num % 2 === 0);
 
 //--------------------
@@ -253,7 +253,7 @@ Boolean primitives are true and false.
 // SOLUTION 1
 function booWho(bool) {
     // What is the new fad diet for ghost developers? The Boolean.
-    if ( bool === true | bool === false) {
+    if (bool === true | bool === false) {
         return true;
     }
     return false;
@@ -265,7 +265,7 @@ console.log(booWho(true)); // true
 
 // SOLUTION 2
 function booWho2(bool) {
-    if (typeof(bool) === "boolean") {
+    if (typeof (bool) === "boolean") {
         return true;
     }
     return false;
@@ -287,14 +287,14 @@ For the purpose of this exercise, you should also capitalize connecting words li
 
 
 function titleCase(str) {
-    let strArray = str.toLowerCase().split(" ") ;
+    let strArray = str.toLowerCase().split(" ");
     let result = strArray.map((item => {
         return item.replace(item.charAt(0), item.charAt(0).toUpperCase())
     }))
 
     return result.join(" ");
 }
-  
+
 console.log(titleCase("I'm a little tea pot"));
 // I'm A Little Tea Pot
 
@@ -318,7 +318,7 @@ function frankenSplice(arr1, arr2, n) {
     localArr.splice(n, 0, ...arr1);
     return localArr;
 }
-  
+
 console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
 // [4, 1, 2, 3, 5, 6]
 
@@ -337,15 +337,15 @@ Hint: Try converting each value to a Boolean.
 function bouncer(arr) {
 
     let newArray = []
-    for ( let i = 0; i < arr.length; i++) {
-         if(arr[i]){
-             newArray.push(arr[i])
-         }
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]) {
+            newArray.push(arr[i])
+        }
     }
 
     return newArray
 }
-  
+
 console.log(bouncer([7, "ate", "", false, 9])); // (3) [7, "ate", 9]
 console.log(bouncer([undefined, null, 0, "", false, NaN])); // [ ]
 
@@ -372,24 +372,52 @@ Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has
 
 function getIndexToIns(arr, num) {
     // Find my place in this sorted array.
-   
-    arr.sort((a,b) => {
+
+    arr.sort((a, b) => {
         return a - b;
     })
-    
-    for ( let i = 0; i < arr.length; i++){
-        if(arr[i] >= num){
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= num) {
             return i
         }
     }
-    
+
     return arr.length
-  }
-  
-  console.log(getIndexToIns([40, 60], 50)); //1
-  console.log(getIndexToIns([40, 60, 70], 65)); //2
-  console.log(getIndexToIns([40, 60, 70], 40)); //2
-  console.log(getIndexToIns([40, 60, 70], 90)); //2
+}
+
+console.log(getIndexToIns([40, 60], 50)); //1
+console.log(getIndexToIns([40, 60, 70], 65)); //2
+console.log(getIndexToIns([40, 60, 70], 40)); //2
+console.log(getIndexToIns([40, 60, 70], 90)); //2
+
+//--------------------
+//Mutations
+
+/* Question
+Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+
+For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+
+The arguments ["hello", "hey"] should return false because the string "hello" does not contain a "y".
+
+Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien".
+*/
 
 
- 
+function mutation(arr) {
+    let convertArr1 = arr[0].toLowerCase();
+    let convertArr2 = arr[1].toLowerCase();
+
+    for (let i = 0; i < convertArr2.length; i++) {
+        if (convertArr1.indexOf(convertArr2[i]) < 0) {
+            return false
+        }
+    }
+    return true
+}
+
+console.log(mutation(["hello", "hel"])); // true
+console.log(mutation(["hello", "hey"])); // false
+console.log(mutation(["Noel", "oel"])); // true
+console.log(mutation(["Noel", "OEL"])); // true
