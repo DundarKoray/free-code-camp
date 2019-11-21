@@ -51,3 +51,22 @@ let dog2 = {
 };
 
 dog2.sayLegs();
+
+//--------------------
+// Define a Constructor Function
+
+
+/* Question
+Create a constructor, Dog, with properties name, color, and numLegs that are set to a string, a string, and a number, respectively.
+*/
+
+function Dog() {
+    this.name = "Tarzan";
+    this.color = "brown";
+    this.numLegs = 4;
+}
+
+let myDog1 = new Dog();
+console.log(myDog1); // Dog {name: "Tarzan", color: "brown", numLegs: 4}
+
+console.log(myDog1.name); // Tarzan
