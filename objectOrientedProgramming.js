@@ -32,3 +32,22 @@ let dog1 = {
 // Add your code below this line
 console.log(dog1.name) // Spot
 console.log(dog1.numLegs) // 4
+
+//--------------------
+// Create a Method on an Object
+
+
+/* Question
+Using the dog object, give it a method called sayLegs. The method should return the sentence "This dog has 4 legs."
+*/
+
+let dog2 = {
+    name: "Spot",
+    numLegs: 4,
+
+    sayLegs() {
+        console.log("This dog has " + this.numLegs + " legs.")
+    }
+};
+
+dog2.sayLegs();
