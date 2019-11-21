@@ -89,3 +89,21 @@ let terrier = new Dog1("cici", "white");
 console.log(terrier.name) // cici
 console.log(terrier.color) // white
 console.log(terrier.numLegs) // 4
+
+//--------------------
+// Verify an Object's Constructor with instanceof
+
+
+/* Question
+Create a new instance of the House constructor, calling it myHouse and passing a number of bedrooms. Then, use instanceof to verify that it is an instance of House.
+*/
+
+/* jshint expr: true */
+
+function House(numBedrooms) {
+    this.numBedrooms = numBedrooms;
+}
+
+// Add your code below this line
+let myHouse = new House;
+console.log(myHouse instanceof House) // true
