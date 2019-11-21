@@ -128,3 +128,34 @@ let beagle = new Dog5("Snoopy");
 
 Dog5.prototype.numLegs = 4;
 console.log(beagle);
+
+//--------------------
+// Iterate Over All Properties
+
+
+/* Question
+Add all of the own properties of beagle to the array ownProps. Add all of the prototype properties of Dog to the array prototypeProps.
+*/
+
+function Dog4(name) {
+    this.name = name;
+}
+
+Dog4.prototype.numLegs = 4;
+
+let beagle1 = new Dog4("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+// Add your code below this line
+for (let property in beagle1) {
+    if (beagle1.hasOwnProperty(property)) {
+        ownProps.push(property)
+    } else {
+        prototypeProps.push(property)
+    }
+}
+
+console.log(ownProps) // ["name"]
+console.log(prototypeProps) // ["numLegs"]
