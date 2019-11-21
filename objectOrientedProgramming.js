@@ -105,5 +105,5 @@ function House(numBedrooms) {
 }
 
 // Add your code below this line
-let myHouse = new House;
+let myHouse = new House(3);
 console.log(myHouse instanceof House) // true
