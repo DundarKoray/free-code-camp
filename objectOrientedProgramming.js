@@ -107,3 +107,24 @@ function House(numBedrooms) {
 // Add your code below this line
 let myHouse = new House(3);
 console.log(myHouse instanceof House) // true
+
+//--------------------
+// Use Prototype Properties to Reduce Duplicate Code
+
+
+/* Question
+Add a numLegs property to the prototype of Dog
+*/
+
+
+function Dog5(name) {
+    this.name = name;
+}
+
+
+
+// Add your code above this line
+let beagle = new Dog5("Snoopy");
+
+Dog5.prototype.numLegs = 4;
+console.log(beagle);
