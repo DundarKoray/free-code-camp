@@ -217,3 +217,39 @@ Dog6.prototype = {
 
 let puppy = new Dog6("Lucy")
 console.log(puppy)
+
+console.log(puppy.constructor === Dog6) //false (forgot to add contstuctor to Dog6.prototype, manually created prototype...)
+console.log(puppy instanceof Dog6) // true
+
+//--------------------
+// Remember to Set the Constructor Property when Changing the Prototype
+
+
+/* Question
+Define the constructor property on the Dog prototype.
+*/
+
+function Dog3(name) {
+    this.name = name;
+}
+
+
+// Modify the code below this line
+Dog3.prototype = {
+    contstuctor: Dog3,
+    numLegs: 4,
+    eat: function () {
+        return "nom nom nom";
+    },
+    describe: function () {
+        return "My name is " + this.name;
+    }
+};
+
+let terrier1 = new Dog3("Peppi");
+console.log(terrier1.name) // Peppi
+console.log(terrier1.eat()) // nom nom nom
+console.log(terrier1.describe()) // My name is Peppi
+
+console.log(terrier1.contstuctor === Dog3) // true
+console.log(terrier1 instanceof Dog3) // true
