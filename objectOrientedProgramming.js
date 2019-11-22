@@ -350,6 +350,36 @@ let bear = Object.create(Animal.prototype)
 console.log(cat.eat()) //nom nom nom
 console.log(bear.eat()) //nom nom nom
 
+//--------------------
+// Add Methods After Inheritance
+
+
+/* Question
+Add all necessary code so the Dog object inherits from Animal and the Dog's prototype constructor is set to Dog. Then add a bark() method to the Dog object so that beagle can both eat() and bark(). The bark() method should print "Woof!" to the console.
+*/
+
+function Animal25() { }
+Animal25.prototype.eat = function () { console.log("nom nom nom"); };
+
+function Dog25() { }
+
+// Add your code below this line
+Dog25.prototype = Object.create(Animal25.prototype);
+Dog25.prototype.constructor = Dog25;
+
+Dog25.prototype.bark = function () {
+    console.log("Woof!")
+}
+
+
+
+
+// Add your code above this line
+
+let beagle25 = new Dog25();
+
+beagle25.eat(); // Should print "nom nom nom"
+beagle25.bark(); // Should print "Woof!"
 
 
 
