@@ -159,3 +159,33 @@ for (let property in beagle1) {
 
 console.log(ownProps) // ["name"]
 console.log(prototypeProps) // ["numLegs"]
+
+//--------------------
+// Understand the Constructor Property
+
+
+/* Question
+Write a joinDogFraternity function that takes a candidate parameter and, using the constructor property, return true if the candidate is a Dog, otherwise return false.
+*/
+
+function Dog(name) {
+    this.name = name;
+}
+
+function Fish(name) {
+    this.name = name;
+}
+
+let eel = new Fish('Skeletor')
+console.log(eel.name) // Skeletor
+
+// Add your code below this line
+let kangal = new Dog("Dük")
+console.log(kangal.name) // Dük
+
+function joinDogFraternity(candidate) {
+    return candidate.constructor === Dog ? true : false
+}
+
+console.log(joinDogFraternity(kangal)) // true
+console.log(joinDogFraternity(eel)) // false
