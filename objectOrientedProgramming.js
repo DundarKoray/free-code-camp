@@ -253,3 +253,21 @@ console.log(terrier1.describe()) // My name is Peppi
 
 console.log(terrier1.contstuctor === Dog3) // true
 console.log(terrier1 instanceof Dog3) // true
+
+//--------------------
+// Understand Where an Object’s Prototype Comes From
+
+
+/* Question
+Use isPrototypeOf to check the prototype of beagle.
+*/
+
+
+function Dog2(name) {
+    this.name = name;
+}
+
+let beagle2 = new Dog2("Snoopy");
+// Add your code below this line
+console.log(beagle2.name) // Snoopy
+console.log(Dog2.prototype.isPrototypeOf(beagle2)) // true
