@@ -398,10 +398,42 @@ Penguin.prototype.constructor = Penguin;
 Penguin.prototype.fly = function () {
     return "Alas, this is a flightless bird."
 }
-
-
 // Add your code above this line
 
 let penguin = new Penguin();
 console.log(penguin.fly()); // Alas, this is a flightless bird.
 
+
+//--------------------
+// Use a Mixin to Add Common Behavior Between Unrelated Objects
+
+
+/* Question
+Create a mixin named glideMixin that defines a method named glide. Then use the glideMixin to give both bird and boat the ability to glide.
+*/
+
+let bird22 = {
+    name: "Donald",
+    numLegs: 2
+};
+
+let boat22 = {
+    name: "Warrior",
+    type: "race-boat"
+};
+
+// Add your code below this line
+
+let glideMixin = function (obj) {
+    obj.glide = function () {
+        console.log("me like gliding!")
+    }
+}
+
+glideMixin(boat22)
+glideMixin(bird22)
+
+bird22.glide() //me like gliding
+boat22.glide() //me like gliding
+
+console.log(bird22) // {name: "Donald", numLegs: 2, glide: ƒ}
