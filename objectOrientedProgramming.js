@@ -371,9 +371,6 @@ Dog25.prototype.bark = function () {
     console.log("Woof!")
 }
 
-
-
-
 // Add your code above this line
 
 let beagle25 = new Dog25();
@@ -381,6 +378,30 @@ let beagle25 = new Dog25();
 beagle25.eat(); // Should print "nom nom nom"
 beagle25.bark(); // Should print "Woof!"
 
+//--------------------
+// Override Inherited Methods
 
 
+/* Question
+Override the fly() method for Penguin so that it returns "Alas, this is a flightless bird."
+*/
+
+function Bird25() { }
+
+Bird25.prototype.fly = function () { return "I am flying!"; };
+
+function Penguin() { }
+Penguin.prototype = Object.create(Bird25.prototype);
+Penguin.prototype.constructor = Penguin;
+
+// Add your code below this line
+Penguin.prototype.fly = function () {
+    return "Alas, this is a flightless bird."
+}
+
+
+// Add your code above this line
+
+let penguin = new Penguin();
+console.log(penguin.fly()); // Alas, this is a flightless bird.
 
