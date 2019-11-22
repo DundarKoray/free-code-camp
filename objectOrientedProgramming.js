@@ -271,3 +271,23 @@ let beagle2 = new Dog2("Snoopy");
 // Add your code below this line
 console.log(beagle2.name) // Snoopy
 console.log(Dog2.prototype.isPrototypeOf(beagle2)) // true
+
+//--------------------
+// Understand the Prototype Chain
+
+
+/* Question
+Modify the code to show the correct prototype chain.
+*/
+
+
+function Dog8(name) {
+    this.name = name;
+}
+
+let beagle3 = new Dog8("Zeytin");
+
+console.log(Dog8.prototype.isPrototypeOf(beagle3));  // => true
+
+// Fix the code below so that it evaluates to true
+console.log(Object.prototype.isPrototypeOf(Dog8.prototype)); // true
