@@ -168,7 +168,7 @@ console.log(prototypeProps) // ["numLegs"]
 Write a joinDogFraternity function that takes a candidate parameter and, using the constructor property, return true if the candidate is a Dog, otherwise return false.
 */
 
-function Dog(name) {
+function Dog7(name) {
     this.name = name;
 }
 
@@ -180,12 +180,40 @@ let eel = new Fish('Skeletor')
 console.log(eel.name) // Skeletor
 
 // Add your code below this line
-let kangal = new Dog("Dük")
+let kangal = new Dog7("Dük")
 console.log(kangal.name) // Dük
 
 function joinDogFraternity(candidate) {
-    return candidate.constructor === Dog ? true : false
+    return candidate.constructor === Dog7 ? true : false
 }
 
 console.log(joinDogFraternity(kangal)) // true
 console.log(joinDogFraternity(eel)) // false
+
+
+//--------------------
+// Change the Prototype to a New Object
+
+
+/* Question
+Add the property numLegs and the two methods eat() and describe() to the prototype of Dog by setting the prototype to a new object.
+*/
+
+function Dog6(name) {
+    this.name = name;
+}
+
+
+Dog6.prototype = {
+    // Add your code below this line
+    numLegs: 4,
+    eat: function () {
+        return "Yummy yummy yummy I got love in my tummy."
+    },
+    describe() {
+        return "To describe or not to describe, that's the question."
+    }
+};
+
+let puppy = new Dog6("Lucy")
+console.log(puppy)
