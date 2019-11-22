@@ -437,3 +437,24 @@ bird22.glide() //me like gliding
 boat22.glide() //me like gliding
 
 console.log(bird22) // {name: "Donald", numLegs: 2, glide: ƒ}
+
+//--------------------
+// Use a Mixin to Add Common Behavior Between Unrelated Objects
+
+
+/* Question
+Change how weight is declared in the Bird function so it is a private variable. Then, create a method getWeight that returns the value of weight 15.
+*/
+
+
+function Bird() {
+    let weight = 15;
+  
+    this.getWeight = function() {
+      return weight
+    }
+  }
+  
+  let parrot = new Bird();
+  console.log(parrot.getWeight()) //15
+  
