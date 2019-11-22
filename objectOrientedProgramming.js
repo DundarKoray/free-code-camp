@@ -292,3 +292,65 @@ console.log(Dog8.prototype.isPrototypeOf(beagle3));  // => true
 // Fix the code below so that it evaluates to true
 console.log(Object.prototype.isPrototypeOf(Dog8.prototype)); // true
 
+//--------------------
+// Use Inheritance So You Don't Repeat Yourself
+
+/*
+
+function Cat(name) {
+    this.name = name;
+}
+
+Cat.prototype = {
+    constructor: Cat,
+    eat: function () {
+        console.log("nom nom nom");
+    }
+};
+
+function Bear(name) {
+    this.name = name;
+}
+
+Bear.prototype = {
+    constructor: Bear,
+    eat: function () {
+        console.log("nom nom nom");
+    }
+};
+
+function Animal() { }
+
+Animal.prototype = {
+    constructor: Animal,
+
+};
+
+*/
+
+/* Question
+The eat method is repeated in both Cat and Bear. Edit the code in the spirit of DRY by moving the eat method to the Animal supertype.
+*/
+function Animal() {
+
+};
+
+Animal.prototype = {
+    constructor: Animal,
+    eat: function () {
+        return "nom nom nom";
+    }
+}
+
+
+
+let cat = Object.create(Animal.prototype)
+let bear = Object.create(Animal.prototype)
+
+console.log(cat.eat()) //nom nom nom
+console.log(bear.eat()) //nom nom nom
+
+
+
+
+
