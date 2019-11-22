@@ -480,3 +480,44 @@ function makeNest() {
     console.log("A cozy nest is ready");
   })();
 */
+
+
+//--------------------
+// Use an IIFE to Create a Module
+
+
+/* Question
+An immediately invoked function expression (IIFE) is often used to group related functionality into a single object or module. For example, an earlier challenge defined two mixins:
+*/
+
+/*
+let isCuteMixin = function(obj) {
+    obj.isCute = function() {
+      return true;
+    };
+  };
+  let singMixin = function(obj) {
+    obj.sing = function() {
+      console.log("Singing to an awesome tune");
+    };
+  };
+*/
+
+  let motionModule = (function () {
+    return {
+        isCuteMixin: function(obj) {
+            obj.isCute = function() {
+                return true;
+            }
+        },
+        singMixin: function(obj) {
+            obj.sing = function() {
+                console.log("Singing to an awesome tune")
+            } 
+        }
+
+    }
+  })()
+
+  motionModule.singMixin(dog)
+  dog.sing() //Singing to an awesome tune
