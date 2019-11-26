@@ -167,3 +167,26 @@ function incrementer() {
 
 var newValue = incrementer(); // Should equal 5
 console.log(fixedValue); // Should print 4
+
+//--------------------
+// Pass Arguments to Avoid External Dependence in a Function
+
+
+/* Question
+Let's update the incrementer function to clearly declare its dependencies.
+
+Write the incrementer function so it takes an argument, and then increases the value by one.
+*/
+
+// the global variable
+var fixedValue1 = 4;
+
+// Add your code below this line
+function incrementer(fixedValue) {
+    return fixedValue + 1;
+
+    // Add your code above this line
+}
+
+console.log(incrementer(fixedValue1)); // Should equal 5
+console.log(fixedValue1); // Should print 4
