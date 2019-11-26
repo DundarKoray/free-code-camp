@@ -66,7 +66,7 @@ const prepareBlackTea = () => 'blackTea';
  * @param {number} numOfCups Number of required cups of tea.
  * @return {Array<string>} Given amount of tea cups.
  **/
-const getTea = (prepareTea, numOfCups) => {
+const getTea1 = (prepareTea, numOfCups) => {
     const teaCups = [];
 
     for (let cups = 1; cups <= numOfCups; cups += 1) {
@@ -79,8 +79,8 @@ const getTea = (prepareTea, numOfCups) => {
 
 // Add your code below this line
 
-const tea4GreenTeamFCC = getTea(prepareGreenTea, 27);
-const tea4BlackTeamFCC = getTea(prepareBlackTea, 13);
+const tea4GreenTeamFCC = getTea1(prepareGreenTea, 27);
+const tea4BlackTeamFCC = getTea1(prepareBlackTea, 13);
 
 // Add your code above this line
 
@@ -143,3 +143,27 @@ var finalTabs = socialWindow
     .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
     .join(workWindow.tabClose(1).tabOpen());
 console.log(finalTabs.tabs);
+
+
+//--------------------
+// Avoid Mutations and Side Effects Using Functional Programming
+
+
+/* Question
+Fill in the code for the function incrementer so it returns the value of the global variable fixedValue increased by one.
+*/
+
+// the global variable
+var fixedValue = 4;
+
+function incrementer() {
+    // Add your code below this line
+    var copyFixedValue = fixedValue;
+    copyFixedValue++
+    console.log(copyFixedValue)
+
+    // Add your code above this line
+}
+
+var newValue = incrementer(); // Should equal 5
+console.log(fixedValue); // Should print 4
