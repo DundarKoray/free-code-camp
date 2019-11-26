@@ -511,8 +511,6 @@ var watchList1 = [
 
 // Add your code below this line
 
-// Add your code below this line
-
 var filteredList = watchList1
     .map(movie => {
         return {
@@ -530,3 +528,20 @@ var filteredList = watchList1
 // Add your code above this line
 
 console.log(filteredList);
+
+//--------------------
+// Return Part of an Array Using the slice Method
+
+/* Question
+
+Use the slice method in the sliceArray function to return part of the anim array given the provided beginSlice and endSlice indices. The function should return an array.
+*/
+
+function sliceArray(anim, beginSlice, endSlice) {
+    // Add your code below this line
+    var newArray = anim.splice(beginSlice, endSlice)
+    return newArray
+    // Add your code above this line
+}
+var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+console.log(sliceArray(inputAnim, 1, 3));// Dog, Tiger, Zebra
