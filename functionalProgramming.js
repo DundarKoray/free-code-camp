@@ -539,9 +539,9 @@ Use the slice method in the sliceArray function to return part of the anim array
 
 function sliceArray(anim, beginSlice, endSlice) {
     // Add your code below this line
-    var newArray = anim.splice(beginSlice, endSlice)
+    var newArray = anim.slice(beginSlice, endSlice)
     return newArray
     // Add your code above this line
 }
 var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
-console.log(sliceArray(inputAnim, 1, 3));// Dog, Tiger, Zebra
+console.log(sliceArray(inputAnim, 1, 3));// Dog, Tiger
