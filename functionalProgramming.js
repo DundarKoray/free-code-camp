@@ -545,3 +545,56 @@ function sliceArray(anim, beginSlice, endSlice) {
 }
 var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
 console.log(sliceArray(inputAnim, 1, 3));// Dog, Tiger
+
+//--------------------
+// Remove Elements from an Array Using slice Instead of splice
+
+/* Question
+
+Rewrite the function nonMutatingSplice by using slice instead of splice. It should limit the provided cities array to a length of 3, and return a new array with only the first three items.
+
+Do not mutate the original array provided to the function.
+*/
+
+/*
+function nonMutatingSplice(cities) {
+    // Add your code below this line
+    return cities.splice(3);
+
+    // Add your code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+
+console.log(nonMutatingSplice(inputCities));
+//(2) ["London", "Berlin"]
+*/
+
+function nonMutatingSplice(cities) {
+    // Add your code below this line
+    return cities.slice(0, 3);
+
+    // Add your code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+
+console.log(nonMutatingSplice(inputCities));
+// (3) ["Chicago", "Delhi", "Islamabad"]
+
+console.log(inputCities) // still remains the same
+
+
+// similar function above, but trying splice to see if it is going to effect the original array
+function MutatingSplice(cities) {
+    // Add your code below this line
+    return cities.splice(3);
+
+    // Add your code above this line
+}
+var inputCities1 = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+
+console.log(MutatingSplice(inputCities1));
+//(2) ["London", "Berlin"]
+
+console.log(inputCities1)
+//["Chicago", "Delhi", "Islamabad"] original array mutated!
+
