@@ -1,0 +1,1 @@
+console.log("--------HI FROM INTERMEDIATE ALGORITHM SCRIPTING----------")
