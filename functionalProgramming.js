@@ -239,9 +239,9 @@ var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
 console.log('removed a book called On The Electrodynamics of Moving Boodies', newerBookList)
 
 
-var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+// var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
 
-console.log('newest book list:', newestBookList)
+// console.log('newest book list:', newestBookList)
 
 console.log(bookList);
 
