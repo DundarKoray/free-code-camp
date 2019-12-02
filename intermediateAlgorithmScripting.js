@@ -477,3 +477,20 @@ dropElements([1, 2, 3, 4], function(n) {
 });
 
 dropElements([1, 2, 3], function(n) {return n < 3; });
+
+// Steamroller
+
+
+/* Question
+Flatten a nested array. You must account for varying levels of nesting.
+*/
+
+function steamrollArray(arr) {
+  while (arr.some(element => Array.isArray(element))) {
+    arr = arr.flat();
+  }
+  return arr;
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]));
+// (4) [1, 2, 3, 4]
