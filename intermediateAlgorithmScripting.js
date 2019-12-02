@@ -296,6 +296,42 @@ function uniteUnique(...arrays) {
 }
 
 // test here
-uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 
 console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+//--------------------
+// Convert HTML Entities
+
+
+/* Question
+Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+*/
+
+function convertHTML(str) {
+  let temp = str.split("")
+
+  for(let i = 0; i < str.length; i++) {
+    switch(temp[i]){
+      case "<":
+        temp[i] = "&lt;";
+        break;
+      case "&":
+        temp[i] = "&amp;";
+        break;
+      case ">":
+        temp[i] = "&gt;";
+        break;
+      case '"':
+        temp[i] = "&quot;";
+        break;
+      case "'":
+        temp[i] = "&apos;";
+        break;
+    }
+
+  }
+  return temp.join("")
+  
+}
+
+console.log(convertHTML("Dolce & Gabbana"));
