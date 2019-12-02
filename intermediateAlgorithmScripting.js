@@ -136,4 +136,29 @@ function spinalCase(str) {
   return str.split(/\s|_|(?=[A-Z])/).join("-").toLowerCase()
 }
 
-console.log(spinalCase('This-Is_Spinal Tap'));
+console.log(spinalCase('ThisIs_Spinal Tap'));
+
+//--------------------
+// Pig Latin
+
+
+/* Question
+Translate the provided string to pig latin.
+
+Pig Latin takes the first consonant (or consonant cluster) of an English word, moves it to the end of the word and suffixes an "ay".
+
+If a word begins with a vowel you just add "way" to the end.
+
+If a word does not contain a vowel, just add "ay" to the end.
+
+Input strings are guaranteed to be English words in all lowercase.
+*/
+
+function translatePigLatin(str) {
+  if (str.match(/^[aeiou]/)) return str + "way";
+
+  const consonantCluster = str.match(/^[^aeiou]+/)[0];
+  return str.substring(consonantCluster.length) + consonantCluster + "ay";
+}
+
+console.log(translatePigLatin("consonant"));
