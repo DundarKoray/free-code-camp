@@ -429,3 +429,26 @@ Color your h3 element with the text-primary Bootstrap class, and center it with 
 /********* Answer
   <h3 class="text-primary text-center">jQuery Playground</h3>
 */
+
+
+
+
+
+
+
+
+
+
+// House our page within a Bootstrap container-fluid div
+
+/******** Question
+Now let's make sure all the content on your page is mobile-responsive.
+
+Let's nest your h3 element within a div element with the class container-fluid.
+*/
+
+/********* Answer
+  <div class="container-fluid">
+    <h3 class="text-primary text-center">jQuery Playground</h3>
+  </div>
+*/
