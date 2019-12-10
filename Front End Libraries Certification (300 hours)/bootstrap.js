@@ -324,3 +324,32 @@ Note: The span element is an acceptable alternative to the i element for the dir
   <button class="btn btn-block btn-info"><i class="fas fa-info-circle"></i>Info</button>
   <button class="btn btn-block btn-danger"><i class="fas fa-trash"></i> Delete</button>
 */
+
+
+
+
+
+
+
+
+
+// Responsively Style Radio Buttons
+
+/******** Question
+You can use Bootstrap's col-xs-* classes on form elements, too! This way, our radio buttons will be evenly spread out across the page, regardless of how wide the screen resolution is.
+
+Nest both your radio buttons within a <div class="row"> element. Then nest each of them within a <div class="col-xs-6"> element.
+
+Note: As a reminder, radio buttons are input elements of type radio.
+*/
+
+/********* Answer
+  <div class="row"> 
+    <div class="col-xs-6"> 
+      <label><input type="radio" name="indoor-outdoor"> Indoor</label>    
+    </div>
+    <div class="col-xs-6"> 
+      <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+    </div>
+  </div>
+*/
