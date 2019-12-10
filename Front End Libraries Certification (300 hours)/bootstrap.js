@@ -370,15 +370,6 @@ Nest all three of your checkboxes in a <div class="row"> element. Then nest each
 */
 
 /********* Answer
-      <div class="row"> 
-      <div class="col-xs-4"> 
-        <label><input type="checkbox" name="personality"> Loving</label>
-      </div>
-      <div class="col-xs-4"> 
-        <label><input type="checkbox" name="personality"> Lazy</label>
-      </div>
-      <div class="col-xs-4"> 
-        <label><input type="checkbox" name="personality"> Crazy</label>
-      </div>
-    </div>
+    <input class="form-control" type="text" placeholder="cat photo URL" required>
+    <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i> Submit</button>
 */
