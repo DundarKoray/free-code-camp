@@ -92,3 +92,21 @@ This button would take up 100% of the available width.
 <button class="btn btn-default btn-block">Like</button>
 */
 
+
+
+
+
+//--------------------
+// Taste the Bootstrap Button Color Rainbow
+
+/******** Question
+The btn-primary class is the main color you'll use in your app. It is useful for highlighting actions you want your user to take.
+
+Replace Bootstrap's btn-default class with btn-primary in your button.
+
+Note that this button will still need the btn and btn-block classes.
+*/
+
+/********* Answer
+<button class="btn btn-default btn-block btn-primary">Like</button>
+*/
