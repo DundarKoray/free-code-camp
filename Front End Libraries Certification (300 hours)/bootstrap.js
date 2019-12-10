@@ -303,3 +303,24 @@ Use Font Awesome to add a thumbs-up icon to your like button by giving it an i e
 /********* Answer
   <button class="btn btn-block btn-primary"><i class="fas fa-thumbs-up"></i>Like</button>
 */
+
+
+
+
+
+
+
+// Add Font Awesome Icons to all of our Buttons
+
+/******** Question
+Font Awesome is a convenient library of icons. These icons can be web fonts or vector graphics. These icons are treated just like fonts. You can specify their size using pixels, and they will assume the font size of their parent HTML elements.
+
+Use Font Awesome to add an info-circle icon to your info button and a trash icon to your delete button.
+
+Note: The span element is an acceptable alternative to the i element for the directions below.
+*/
+
+/********* Answer
+  <button class="btn btn-block btn-info"><i class="fas fa-info-circle"></i>Info</button>
+  <button class="btn btn-block btn-danger"><i class="fas fa-trash"></i> Delete</button>
+*/
