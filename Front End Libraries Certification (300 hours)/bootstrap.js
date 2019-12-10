@@ -309,7 +309,7 @@ Use Font Awesome to add a thumbs-up icon to your like button by giving it an i e
 
 
 
-
+//--------------------
 // Add Font Awesome Icons to all of our Buttons
 
 /******** Question
@@ -332,7 +332,7 @@ Note: The span element is an acceptable alternative to the i element for the dir
 
 
 
-
+//--------------------
 // Responsively Style Radio Buttons
 
 /******** Question
@@ -360,7 +360,7 @@ Note: As a reminder, radio buttons are input elements of type radio.
 
 
 
-
+//--------------------
 // Responsively Style Checkboxes
 
 /******** Question
@@ -382,7 +382,7 @@ Nest all three of your checkboxes in a <div class="row"> element. Then nest each
 
 
 
-
+//--------------------
 // Line up Form Elements Responsively with Bootstrap
 
 /******** Question
@@ -413,7 +413,7 @@ This is the last challenge we'll do for our Cat Photo App for now. We hope you'v
 
 
 
-
+//--------------------
 // Create a Bootstrap Headline
 
 /******** Question
@@ -438,7 +438,7 @@ Color your h3 element with the text-primary Bootstrap class, and center it with 
 
 
 
-
+//--------------------
 // House our page within a Bootstrap container-fluid div
 
 /******** Question
@@ -451,4 +451,28 @@ Let's nest your h3 element within a div element with the class container-fluid.
   <div class="container-fluid">
     <h3 class="text-primary text-center">jQuery Playground</h3>
   </div>
+*/
+
+
+
+
+
+
+
+//--------------------
+// Create a Bootstrap RowPassed
+
+/******** Question
+Now we'll create a Bootstrap row for our inline elements.
+
+Create a div element below the h3 tag, with a class of row.
+*/
+
+/********* Answer
+  <div class="container-fluid">
+  <h3 class="text-primary text-center">jQuery Playground</h3>
+  <div class="row">
+  
+  </div>
+</div>
 */
