@@ -353,3 +353,32 @@ Note: As a reminder, radio buttons are input elements of type radio.
     </div>
   </div>
 */
+
+
+
+
+
+
+
+
+// Responsively Style Checkboxes
+
+/******** Question
+Since Bootstrap's col-xs-* classes are applicable to all form elements, you can use them on your checkboxes too! This way, the checkboxes will be evenly spread out across the page, regardless of how wide the screen resolution is.
+
+Nest all three of your checkboxes in a <div class="row"> element. Then nest each of them in a <div class="col-xs-4"> element.
+*/
+
+/********* Answer
+      <div class="row"> 
+      <div class="col-xs-4"> 
+        <label><input type="checkbox" name="personality"> Loving</label>
+      </div>
+      <div class="col-xs-4"> 
+        <label><input type="checkbox" name="personality"> Lazy</label>
+      </div>
+      <div class="col-xs-4"> 
+        <label><input type="checkbox" name="personality"> Crazy</label>
+      </div>
+    </div>
+*/
