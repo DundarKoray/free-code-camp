@@ -1,3 +1,6 @@
+console.log("--------HELLO FROM BOOTSTRAP----------")
+
+
 //--------------------
 // Use Responsive Design with Bootstrap Fluid Containers
 
