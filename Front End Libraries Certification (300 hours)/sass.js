@@ -240,3 +240,23 @@ There should be 5 different classes from text-1 to text-5. Then set font-size to
 <p class="text-5">Hello</p>
 
 */
+
+
+
+
+
+
+
+
+//--------------------
+// Split Your Styles into Smaller Chunks with Partials
+
+/******** Question
+Write an @import statement to import a partial named _variables.scss into the main.scss file.
+*/
+
+/********* Answer
+// The main.scss file
+
+@import 'variables'
+*/
