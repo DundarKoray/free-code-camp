@@ -105,7 +105,7 @@ If $val is not light, medium, or heavy, the border should be set to none.
 /********* Answer
 <style type='text/sass'>
 
-  
+
 
   @mixin border-stroke($val) {
     @if $val == light {
@@ -122,7 +122,7 @@ If $val is not light, medium, or heavy, the border should be set to none.
 
     @else {
       border: none;
-    } 
+    }
   }
 
   #box {
@@ -161,7 +161,7 @@ It should create 5 classes called .text-1 to .text-5 where each has a font-size 
 
     @for $j from 1 through 6 {
         .text-#{$j} { font-size: (10 * $j)px;}
-    } 
+    }
 
 
 </style>
@@ -171,5 +171,31 @@ It should create 5 classes called .text-1 to .text-5 where each has a font-size 
 <p class="text-3">Hello</p>
 <p class="text-4">Hello</p>
 <p class="text-5">Hello</p>
+
+*/
+
+
+
+
+
+
+
+//--------------------
+// Use @each to Map Over Items in a List
+
+/******** Question
+Write an @each directive that goes through a list: blue, black, red and assigns each variable to a .color-bg class, where the "color" part changes for each item. Each class should set the background-color the respective color.
+*/
+
+/********* Answer
+
+
+$colors: (blue, black, red);
+
+  @each $color in $colors {
+    .#{$color}-bg {
+        background-color: $color;
+      }
+    }
 
 */
