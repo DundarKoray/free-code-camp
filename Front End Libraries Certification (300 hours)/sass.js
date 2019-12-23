@@ -260,3 +260,29 @@ Write an @import statement to import a partial named _variables.scss into the ma
 
 @import 'variables'
 */
+
+
+
+
+
+
+
+//--------------------
+// Extend One Set of CSS Styles to Another Element
+
+/******** Question
+Make a class .info-important that extends .info and also has a background-color set to magenta.
+*/
+
+/********* Answer
+  .info{
+    width: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+  }
+
+  .info-important {
+    @extend .info;
+    background-color: magenta;
+  }
+*/
