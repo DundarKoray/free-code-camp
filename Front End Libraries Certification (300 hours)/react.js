@@ -608,3 +608,33 @@ Camper.propTypes = {
   name: PropTypes.string.isRequired
 }
 */
+
+
+
+
+
+//--------------------
+// Create a Stateful Component
+
+/******** Question
+There is a component in the code editor that is trying to render a name property from its state. However, there is no state defined. Initialize the component with state in the constructor and assign your name to a property of name.
+*/
+
+/********* Answer
+class StatefulComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    // initialize state here
+    this.state = {
+      name: 'Koray Dündar'
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>
+      </div>
+    );
+  }
+};
+*/
