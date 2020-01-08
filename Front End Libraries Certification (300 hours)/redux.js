@@ -72,3 +72,33 @@ const action = {
     type: 'LOGIN'
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------
+// Define an Action Creator
+
+/******** Question
+Define a function named actionCreator() that returns the action object when called.
+*/
+
+/********* Answer
+const action = {
+  type: 'LOGIN'
+}
+// Define an action creator here:
+
+const actionCreator = (action) => {
+  return action
+}
+*/
