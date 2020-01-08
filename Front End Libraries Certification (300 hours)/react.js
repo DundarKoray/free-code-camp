@@ -1,4 +1,4 @@
-console.log("--------HELLO FROM JQUERY----------")
+console.log("--------HELLO FROM REACT----------")
 
 
 
