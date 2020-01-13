@@ -542,7 +542,114 @@ const store = Redux.createStore(
   asyncDataReducer,
   Redux.applyMiddleware(ReduxThunk.default)
 );
+*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------
+//   Send Action Data to the Store
+
+/******** Question
+There's a basic notesReducer() and an addNoteText() action creator defined in the code editor. Finish the body of the addNoteText() function so that it returns an action object. The object should include a type property with a value of ADD_NOTE, and also a text property set to the note data that's passed into the action creator. When you call the action creator, you'll pass in specific note information that you can access for the object.
+
+Next, finish writing the switch statement in the notesReducer(). You need to add a case that handles the addNoteText() actions. This case should be triggered whenever there is an action of type ADD_NOTE and it should return the text property on the incoming action as the new state.
+
+The action is dispatched at the bottom of the code. Once you're finished, run the code and watch the console. That's all it takes to send action-specific data to the store and use it when you update store state.
+*/
+
+/********* Answer
+const ADD_NOTE = 'ADD_NOTE';
+
+const notesReducer = (state = 'Initial State', action) => {
+  switch(action.type) {
+    // change code below this line
+    case ADD_NOTE:
+      return action.text;
+
+    // change code above this line
+    default:
+      return state;
+  }
+};
+
+const addNoteText = (note) => {
+  // change code below this line
+  return {
+    type: ADD_NOTE,
+    text: note
+  }
+
+  // change code above this line
+};
+
+const store = Redux.createStore(notesReducer);
+
+console.log(store.getState());
+store.dispatch(addNoteText('Hello!'));
+console.log(store.getState());
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+//--------------------
+//   Write a Counter with Redux
+
+/******** Question
+In this lesson, you'll implement a simple counter with Redux from scratch. The basics are provided in the code editor, but you'll have to fill in the details! Use the names that are provided and define incAction and decAction action creators, the counterReducer(), INCREMENT and DECREMENT action types, and finally the Redux store. Once you're finished you should be able to dispatch INCREMENT or DECREMENT actions to increment or decrement the state held in the store. Good luck building your first Redux app!
+*/
+
+/********* Answer
+const INCREMENT = "INCREMENT"; // define a constant for increment action types
+const DECREMENT = "DECREMENT"; // define a constant for decrement action types
+
+const counterReducer = (state = 0, action) => {
+    switch(action.type) {
+        case INCREMENT:
+            return (state += 1)
+            break;
+        case DECREMENT:
+            return (state -= 1)
+            break;
+        default: 
+            return state;
+    }
+}; // define the counter reducer which will increment or decrement the state based on the action it receives
+
+const incAction = () => {
+    return {
+        type: INCREMENT
+    }
+}; // define an action creator for incrementing
+
+const decAction = () => {
+    return {
+        type: DECREMENT
+    }
+}; // define an action creator for decrementing
+
+const store = Redux.createStore(counterReducer); // define the Redux store here, passing in your reducers
 
 */
