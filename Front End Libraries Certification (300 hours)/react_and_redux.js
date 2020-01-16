@@ -256,3 +256,34 @@ class AppWrapper extends React.Component {
 };
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------
+// Map State to Props
+
+/******** Question
+Create a function mapStateToProps(). This function should take state as an argument, then return an object which maps that state to specific property names. These properties will become accessible to your component via props. Since this example keeps the entire state of the app in a single array, you can pass that entire state to your component. Create a property messages in the object that's being returned, and set it to state.
+*/
+
+/********* Answer
+const state = [];
+
+// change code below this line
+const mapStateToProps = (state) => {
+    return {
+        messages: state
+    }
+}
+*/
