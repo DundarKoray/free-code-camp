@@ -161,7 +161,7 @@ const store = Redux.createStore(messageReducer);
 
 
 //--------------------
-// Use Provider to Connect Redux to React
+// Map Dispatch to Props
 
 /******** Question
 The code editor now shows all your Redux and React code from the past several challenges. It includes the Redux store, actions, and the DisplayMessages component. The only new piece is the AppWrapper component at the bottom. Use this top level component to render the Provider from ReactRedux, and pass the Redux store as a prop. Then render the DisplayMessages component as a child. Once you are finished, you should see your React component rendered to the page.
@@ -285,5 +285,35 @@ const mapStateToProps = (state) => {
     return {
         messages: state
     }
+}
+*/
+
+
+
+
+
+
+//--------------------
+// Map Dispatch to Props
+
+/******** Question
+The code editor provides an action creator called addMessage(). Write the function mapDispatchToProps() that takes dispatch as an argument, then returns an object. The object should have a property submitNewMessage set to the dispatch function, which takes a parameter for the new message to add when it dispatches addMessage().
+*/
+
+/********* Answer
+const addMessage = (message) => {
+  return {
+    type: 'ADD',
+    message: message
+  }
+};
+
+// change code below this line
+const mapDispatchToProps = (dispatch) => {
+  return {
+    submitNewMessage: function(message) {
+      dispatch(addMessage(message))
+    } 
+  }
 }
 */
