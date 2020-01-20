@@ -612,3 +612,28 @@ class AppWrapper extends React.Component {
   }
 };
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------
+// Extract Local State into Redux
+
+/******** Question
+Log the message 'Now I know React and Redux!' to the console.
+*/
+
+/********* Answer
+console.log('Now I know React and Redux!')
+*/
