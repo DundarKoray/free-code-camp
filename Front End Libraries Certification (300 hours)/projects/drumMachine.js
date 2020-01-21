@@ -1,45 +1,39 @@
 /*
 import React from "react";
 import "./styles.css";
-
-const data = [
-  { id: 'snare', letter: 'Q', src: 'https://www.myinstants.com/media/sounds/snare.mp3' },
-  { id: 'bass 1', letter: 'W', src: 'https://www.myinstants.com/media/sounds/bass-drum.mp3' },
-  { id: 'bongo', letter: 'E', src: 'http://tipiwiki.free.fr/snd/Percussion(4e)2.wav' },
-  { id: 'tom tom', letter: 'A', src: 'http://www.denhaku.com/r_box/sr16/sr16tom/loelectm.wav' },
-  { id: 'bass 3', letter: 'S', src: 'http://billor.chsh.chc.edu.tw/sound/bass4.wav' },
-  { id: 'shotgun', letter: 'D', src: 'http://david.guerrero.free.fr/Effects/ShotgunReload.wav' },
-  { id: 'high hat', letter: 'Z', src: 'http://www.denhaku.com/r_box/tr707/closed.wav' },
-  { id: 'drum hit', letter: 'X', src: 'http://www.masterbits.de/sc_docu/sounds1/1TM00013.MP3' },
-  { id: 'laser', letter: 'C', src: 'http://www.sa-matra.net/sounds/starcontrol/Umgah-Backzip.wav'  },
-]
-
-
+import data from "./data";
+import Drum from "./drum";
 
 class DrumMachine extends React.Component {
-  constructor(props){
-    super(props) 
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: "Press a key to make a sound, or click one of the buttons"
+    };
 
-    this.handleClick = this.handleClick.bind(this)
+    this.handleText = this.handleText.bind(this);
   }
 
-  handleClick(){
-    this.audio.play();
-    this.audio.currentTime = 0;
+  handleText(text) {
+    this.setState({
+      text: text
+    });
   }
+
   render() {
     return (
       <div id="drum-machine">
-        <div id="display">
-          <div className="drum-pads">{data.map(item => {
-            return (
-              <div class="drum-pad" id={item.id} onClick={this.handleClick}> 
-                <p>{item.letter}</p>
-                <audio ref={ref => this.audio = ref} src={item.src}></audio>  
-              </div>
-            )
-          })}
-          </div>
+        <h1 id="display">{this.state.text}</h1>
+        <div className="drum-pads">
+          {data.map((item, key) => (
+            <Drum
+              id={item.id}
+              key={item.id}
+              letter={item.letter}
+              url={item.src}
+              handleText={this.handleText}
+            />
+          ))}
         </div>
       </div>
     );
@@ -47,6 +41,65 @@ class DrumMachine extends React.Component {
 }
 
 export default DrumMachine;
+
+
+
+
+import React from "react";
+import "./styles.css";
+
+class Drum extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleClick = this.handleClick.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+
+  handleClick() {
+    this.audio.play();
+    this.audio.currentTime = 0;
+    this.props.handleText(this.props.id);
+  }
+
+  handleKeyDown(event) {
+    if (event.keyCode === this.props.letter.charCodeAt()) {
+      this.audio.play();
+      this.audio.currentTime = 0;
+      this.props.handleText(this.props.letter);
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyDown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyDown);
+  }
+
+  render() {
+    return (
+      <div
+        className="drum-pad"
+        id={this.props.id}
+        onClick={this.handleClick}
+        onKeyDown={this.handleKeyDown}
+      >
+        <p>{this.props.letter}</p>
+        <audio
+          className="clip"
+          ref={input => (this.audio = input)}
+          id={this.props.id}
+          src={this.props.url}
+        />
+      </div>
+    );
+  }
+}
+
+export default Drum;
+
 
 
 
