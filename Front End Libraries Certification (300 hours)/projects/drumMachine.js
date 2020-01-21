@@ -1,5 +1,6 @@
 /*
 import React from "react";
+import "./styles.css";
 
 const data = [
   { id: 'snare', letter: 'Q', src: 'https://www.myinstants.com/media/sounds/snare.mp3' },
@@ -16,18 +17,29 @@ const data = [
 
 
 class DrumMachine extends React.Component {
+  constructor(props){
+    super(props) 
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(){
+    this.audio.play();
+    this.audio.currentTime = 0;
+  }
   render() {
     return (
       <div id="drum-machine">
         <div id="display">
-          {data.map(item => {
+          <div className="drum-pads">{data.map(item => {
             return (
-              <div class="drum-pad" id={item.id}> 
+              <div class="drum-pad" id={item.id} onClick={this.handleClick}> 
                 <p>{item.letter}</p>
-                <audio src={item.src}></audio>  
+                <audio ref={ref => this.audio = ref} src={item.src}></audio>  
               </div>
             )
           })}
+          </div>
         </div>
       </div>
     );
@@ -35,6 +47,7 @@ class DrumMachine extends React.Component {
 }
 
 export default DrumMachine;
+
 
 
 */
