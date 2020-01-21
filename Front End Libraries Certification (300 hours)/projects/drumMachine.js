@@ -18,18 +18,23 @@ const data = [
 class DrumMachine extends React.Component {
   render() {
     return (
-      
       <div id="drum-machine">
-      <div id="display">
-        {data.map(item => {
-          return <div class="drum-pad" id={item.id}> {item.letter} </div>
-        })}
+        <div id="display">
+          {data.map(item => {
+            return (
+              <div class="drum-pad" id={item.id}> 
+                <p>{item.letter}</p>
+                <audio src={item.src}></audio>  
+              </div>
+            )
+          })}
+        </div>
       </div>
-    </div>
     );
   }
 }
 
 export default DrumMachine;
+
 
 */
