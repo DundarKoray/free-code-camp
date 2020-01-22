@@ -92,3 +92,39 @@ Select the body node, then select all h2 elements. Have D3 create and append an 
   </script>
 </body>
 */
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------
+// Work with Dynamic Data in D3
+
+/******** Question
+Change the text() method so that each h2 element displays the corresponding value from the dataset array with a single space and "USD". For example, the first heading should be "12 USD".
+*/
+
+/********* Answer
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    d3.select("body").selectAll("h2")
+      .data(dataset)
+      .enter()
+      .append("h2")
+      // Add your code below this line
+
+      .text((d) => (`${d} USD`) );
+
+      // Add your code above this line
+  </script>
+</body>
+*/
