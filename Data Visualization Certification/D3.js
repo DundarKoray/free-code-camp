@@ -481,10 +481,13 @@ Use the data(), enter(), and append() methods to create and append a rect for ea
 
 
 //--------------------
-//  Create a Bar for Each Data Point in the Set
+//  Dynamically Set the Coordinates for Each Bar
 
 /******** Question
-Use the data(), enter(), and append() methods to create and append a rect for each item in dataset. The bars should display all on top of each other, this will be fixed in the next challenge.
+Change the x attribute callback function so it returns the index times 30.
+
+Note
+Each bar has a width of 25, so increasing each x value by 30 adds some space between the bars. Any value greater than 25 would work in this example.
 */
 
 /********* Answer
@@ -501,17 +504,21 @@ Use the data(), enter(), and append() methods to create and append a rect for ea
                   .attr("height", h);
 
     svg.selectAll("rect")
-       // Add your code below this line
-      .data(dataset).enter().append("rect")
+       .data(dataset)
+       .enter()
+       .append("rect")
+       .attr("x", (d, i) => {
+         // Add your code below this line
+          return i *= 30
 
-
-       // Add your code above this line
-       .attr("x", 0)
+         // Add your code above this line
+       })
        .attr("y", 0)
        .attr("width", 25)
        .attr("height", 100);
   </script>
 </body>
+
 */
 
 
