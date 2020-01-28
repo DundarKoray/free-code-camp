@@ -691,7 +691,7 @@ Add an attr() method to set the "fill" of all the bars to the color "navy".
 
 
 //--------------------
-//  Change the Color of an SVG Element
+//  Add Labels to D3 Elements
 
 /******** Question
 The code in the editor already binds the data to each new text element. First, append text nodes to the svg. Next, add attributes for the x and y coordinates. They should be calculated the same way as the rect ones, except the y value for the text should make the label sit 3 units higher than the bar. Finally, use the D3 text() method to set the label equal to the data point value.
@@ -733,13 +733,64 @@ For the label to sit higher than the bar, decide if the y value for the text sho
        .attr("y", (d, i) => h - 3 * d - 3)
        .attr("width", 25)
        .attr("height", (d, i) => 3 * d)
-
-
-
-
-
        // Add your code above this line
   </script>
 <body>
 
+*/
+
+
+
+
+
+
+
+
+
+
+//--------------------
+//  Style D3 Labels
+
+/******** Question
+Set the font-size of the text elements to 25px, and the color of the text to red.
+*/
+
+/********* Answer
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    const w = 500;
+    const h = 100;
+
+    const svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", w)
+                  .attr("height", h);
+
+    svg.selectAll("rect")
+       .data(dataset)
+       .enter()
+       .append("rect")
+       .attr("x", (d, i) => i * 30)
+       .attr("y", (d, i) => h - 3 * d)
+       .attr("width", 25)
+       .attr("height", (d, i) => d * 3)
+       .attr("fill", "navy");
+
+    svg.selectAll("text")
+       .data(dataset)
+       .enter()
+       .append("text")
+       .text((d) => d)
+       .attr("x", (d, i) => i * 30)
+       .attr("y", (d, i) => h - (3 * d) - 3)
+       // Add your code below this line
+       .style("font-size", 25)
+       .style("fill", "red")
+
+
+       // Add your code above this line
+  </script>
+</body>
 */
